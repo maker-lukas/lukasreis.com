@@ -1,0 +1,36 @@
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover,a:active {
+    text-decoration: underline;
+}
+
+
+body {
+    background-color:#171717;
+    font-family: monospace; 
+    color: white;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-inline: auto;
+
+    padding-inline: max(calc((100% - 105ch) / 2), 1rem);
+}
+
+.test {
+    width: 100%;
+    height: 450px;
+    background-color: #8B5FBF;
+    border-radius: 20px;
+    padding: 15px 15px 15px 15px;
+}
+
