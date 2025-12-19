@@ -1,8 +1,12 @@
+@font-face {
+  font-family: JetBrainsMono;
+  src: url(/public/fonts/jetmono.ttf);
+}
+
 main {
-  min-height: 100vh;
+  min-height: 150vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+
 }
 
 
@@ -17,13 +21,13 @@ a:hover,a:active {
 
 body {
     background-color:#171717;
-    font-family: monospace; 
+    font-family: JetBrainsMono; 
     color: white;
     margin-top: 0;
     margin-bottom: 0;
     margin-inline: auto;
 
-    padding-inline: max(calc((100% - 105ch) / 2), 1rem);
+    padding-inline: max(calc((100% - 810px) / 2), 1rem);
 }
 
 .test {
@@ -32,5 +36,13 @@ body {
     background-color: #8B5FBF;
     border-radius: 20px;
     padding: 15px 15px 15px 15px;
+    
 }
 
+.test2 {
+    width: 100%;
+    height: 450px;
+    background-color: #8B5FBF;
+    border-radius: 20px;
+    padding: 15px 15px 15px 15px;
+}

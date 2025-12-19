@@ -1,19 +1,40 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
-
 ---
 
 <Layout title="lukas/home">
-    <div class="test">
-        <p>Hya! I’m Lukas</p>
+    <div class="grid-container">
+        <div class="item item-1">item 1</div>
+        <div class="item item-2">item 2</div>
+        <div class="item item-3">item 3</div>
     </div>
 </Layout>
 
 <style>
-    p {
-        margin: 0;
-        font-size: 36px;
-        font-weight: bold;
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        width: 100%;
+        height: 100%;
+        grid-gap: 100px;
+    }
+
+    .item {
+        width: 100%;
+        background-color: #8B5FBF;
+        border-radius: 20px;
+    }
+
+    .item-1 {
+        height: 450px;
+    }
+
+    .item-2 {
+        height: 600px;
+    }
+
+    .item-3 {
+        height: 450px;
     }
 </style>
