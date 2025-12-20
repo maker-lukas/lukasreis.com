@@ -1,11 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Link from "../components/Link.astro"
 ---
 
 <Layout title="lukas/home">
     <div class="grid-container">
-        <div class="item item-1">item 1</div>
-        <div class="item item-2">Projects</div>
+        <div class="item item-1">Hya! I'm Lukas <p>hello</p></div>
+        <div class="item item-2">Projects<Link page="/projects"></div>
         <div class="item item-3">Blog</div>
     </div>
 </Layout>
@@ -16,32 +17,35 @@ import Layout from "../layouts/Layout.astro";
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, 100vh);
         width: 100%;
-        max-height: 100vh;
-
     }
 
     .item {
         width: 100%;
         background-color: #8B5FBF;
         border-radius: 20px;
+        padding: 15px;
+        height: 450px;
     }
 
     .item-1 {
-        height: 450px;
         place-self: center;
+        font-size: 32px;
+        font-weight: bold;
     }
 
     .item-2 {
-        height: 600px;
         font-size: 32px;
         font-weight: bold;
         text-align: center;
     }
 
     .item-3 {
-        height: 450px;
         font-size: 32px;
         font-weight: bold;
         text-align: center;
+    }
+
+    p {
+        font-size: 24px;
     }
 </style>

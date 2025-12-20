@@ -1,13 +1,13 @@
 ---
-const { href } = Astro.props;
+const { page } = Astro.props
 ---
 
-<a href={href}>
-    <slot />
-</a>
+<a class="link" href={page}>See more →</a>
 
 <style>
-    a {
-        color:#171717
+    .link {
+        font-size: 20px;
+        font-weight: bold;
+        color: #FFFFFF;
     }
 </style>

@@ -4,26 +4,30 @@
 }
 
 main {
-  min-height: 300vh;
+  min-height: 200vh;
 }
 
 
 a:link {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 a:hover,a:active {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
 
 body {
-    background-color:#171717;
-    font-family: JetBrainsMono; 
-    color: white;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-inline: auto;
+	background-color:#171717;
+	font-family: JetBrainsMono; 
+	color: white;
 
-    padding-inline: max(calc((100% - 810px) / 2), 1rem);
+	position: relative;
+	padding-inline: max(calc((100% - 810px) / 2), 15px);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
