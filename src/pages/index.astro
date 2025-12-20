@@ -5,8 +5,8 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="lukas/home">
     <div class="grid-container">
         <div class="item item-1">item 1</div>
-        <div class="item item-2">item 2</div>
-        <div class="item item-3">item 3</div>
+        <div class="item item-2">Projects</div>
+        <div class="item item-3">Blog</div>
     </div>
 </Layout>
 
@@ -14,10 +14,10 @@ import Layout from "../layouts/Layout.astro";
     .grid-container {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, auto);
+        grid-template-rows: repeat(3, 100vh);
         width: 100%;
-        height: 100%;
-        grid-gap: 100px;
+        max-height: 100vh;
+
     }
 
     .item {
@@ -28,13 +28,20 @@ import Layout from "../layouts/Layout.astro";
 
     .item-1 {
         height: 450px;
+        place-self: center;
     }
 
     .item-2 {
         height: 600px;
+        font-size: 32px;
+        font-weight: bold;
+        text-align: center;
     }
 
     .item-3 {
         height: 450px;
+        font-size: 32px;
+        font-weight: bold;
+        text-align: center;
     }
 </style>
