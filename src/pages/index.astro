@@ -4,15 +4,19 @@ import Link from "../components/Link.astro"
 ---
 
 <Layout title="lukas/home">
-    <div class="grid-container">
-        <div class="item item-1">Hya! I'm Lukas <p>hello</p></div>
-        <div class="item item-2">Projects<Link page="/projects"></div>
-        <div class="item item-3">Blog</div>
+    <div class="outer-grid">
+        <div class="item item-1 inner-grid">
+            <div class="inner inner-1">1</div>
+            <div class="inner inner-2">2</div>
+            <div class="inner inner-3">3</div>
+        </div>
+        <div class="item item-2"></div>
+        <div class="item item-3"></div>
     </div>
 </Layout>
 
 <style>
-    .grid-container {
+    .outer-grid {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, 100vh);
@@ -29,8 +33,6 @@ import Link from "../components/Link.astro"
 
     .item-1 {
         place-self: center;
-        font-size: 32px;
-        font-weight: bold;
     }
 
     .item-2 {
@@ -44,6 +46,38 @@ import Link from "../components/Link.astro"
         font-weight: bold;
         text-align: center;
     }
+
+    .inner-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "one two"
+        "one three";
+    gap: 15px;
+    align-content: start;
+}
+
+.inner {
+    background-color: #7550A1;
+    border-radius: 10px;
+}
+
+.inner-1 {
+    grid-area: one;
+    height: 100%;
+    background-color:#8B5FBF;
+}
+
+.inner-2 {
+    grid-area: two;
+    height: 285px;
+}
+
+.inner-3 {
+    grid-area: three;
+    height: 120px;
+}
 
     p {
         font-size: 24px;
