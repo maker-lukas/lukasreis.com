@@ -1,30 +1,16 @@
 ---
 import Link from "./Link.astro";
-
-
 ---
 
-<div class="inner inner-1"></div>
-<div class="inner inner-2">
-    <h1>Blog</h1>
-</div>
-<div class="inner inner-3">
-    <Link page="/blog"/>
-</div>
-<div class="inner blog">1</div>
-<div class="inner blog">2</div>
-<div class="inner blog">3</div>
+<div></div>
+<h1>Blog</h1>
+<div class="see-more"><Link page="/blog"/></div>
+<div class="blog">1</div>
+<div class="blog">2</div>
+<div class="blog">3</div>
 
 <style>
-    .inner {
-        border-radius: 10px;
-    }
-
-    .inner-2 {
-        text-align: center;
-    }
-
-    .inner-3{
+    .see-more {
         text-align: end;
         margin-top: auto;
         margin-bottom: auto;
@@ -33,13 +19,13 @@ import Link from "./Link.astro";
     .blog {
         padding: 15px;
         background-color: #7550A1;
-        font-size: 15px;
-        text-align: start;
         grid-column: span 3;
+        border-radius: 10px;
     }
 
     h1{
         font-size: 32px;
         font-weight: bold;
+        text-align: center;
     }
 </style>
