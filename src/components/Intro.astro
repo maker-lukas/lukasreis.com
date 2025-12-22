@@ -4,12 +4,17 @@
 
 <div class="inner inner-1">
     <h1>Hya! I'm Lukas.</h1>
-    <p>A 16 year old human</p>
+    <p class="hya">A 16 year old human</p>
 </div>
 <div class="inner inner-2">
     <img class="fit-image"
     src="public/images/lukas.jpg"
     alt="picture of lukas"/>
+    <div class="stats">
+        <p class="atributes">hour </p>
+        <span>/</span>
+        <p class="atributes">status</p>
+    </div>
 </div>
 <div class="inner inner-3">
     Now Playing
@@ -31,14 +36,18 @@
     .inner-2 {
         grid-area: two;
         height: 285px;
-        padding: 15px;
-        padding-top: 15px;
+        padding: 15px 15px 10px 15px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     .inner-3 {
         grid-area: three;
         height: 120px;
         padding: 15px;
+
     }
 
     .fit-image {
@@ -49,9 +58,28 @@
     border-radius: 10px;
     }
 
-    p {
+    .hya {
         margin-top: 10px;
         font-size: 20px;
         font-weight: bold;
     }
+
+    .stats {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        color: #171717;
+        background-color: #ECD444;
+        max-width: 220px;
+        width: 100%;
+        height: 30px;
+        border-radius: 15px;
+
+        font-size: 14px;
+        font-weight: bold;
+        padding-inline: 15px;
+    }
+
+
 </style>

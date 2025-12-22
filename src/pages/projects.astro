@@ -1,18 +1,40 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import ProjectsProjects from "../components/ProjectsProjects.astro";
 ---
 
 <Layout title="lukas/projecs">
-	<p class="project">Projects</p>
+	<div class="page-grid">
+		<div class="item item-1 projects-grid">
+			<ProjectsProjects />
+		</div>
+	</div>
 </Layout>
 
 <style>
-	.project {
-		font-weight: bold;
-		font-size: 30px;
+	.page-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 100vh;
+		width: 100%;
+	}
 
-		color: white;	
-		padding: 200px;
-		text-align: center;
+	.projects-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 40px 1fr 1fr;
+		grid-gap: 15px;
+	}
+
+    .item {
+        width: 100%;
+        background-color: #8B5FBF;
+        border-radius: 20px;
+        padding: 15px;
+        height: 700px;
+    }
+
+	.item-1 {
+		align-self: center;
 	}
 </style>

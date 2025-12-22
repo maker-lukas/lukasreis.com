@@ -1,33 +1,32 @@
 ---
-import Link from "./Link.astro";
-
-
 ---
-<div class="inner inner-1"></div>
-<div class="inner inner-2">
+
+<div class="inner inner-1">
     <h1>Projects</h1>
-</div>
-<div class="inner inner-3">
-    <Link page="/projects" />
 </div>
 <div class="inner project">1</div>
 <div class="inner project">2</div>
 <div class="inner project">3</div>
+<div class="inner project">4</div>
+<div class="inner project">5</div>
+<div class="inner project">6</div>
 
 <style>
 
     .inner {
         border-radius: 10px;
     }
+    
+    .inner-1 {
+        grid-column: span 3;
+    }
 
     .inner-2 {
-        text-align: center;
+
     }
 
     .inner-3 {
-        text-align: end;
-        margin-top: auto;
-        margin-bottom: auto;
+
     }
 
     .project {
@@ -38,5 +37,6 @@ import Link from "./Link.astro";
     h1 {
         font-size: 32px;
         font-weight: bold;
+        text-align: center;
     }
 </style>

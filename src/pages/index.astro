@@ -1,8 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Intro from "../components/Intro.astro"
-import Projects from "../components/Projects.astro";
 import BlogHome from "../components/BlogHome.astro"
+import ProjectsHome from "../components/ProjectsHome.astro";
 ---
 
 <Layout title="lukas/home">
@@ -11,7 +11,7 @@ import BlogHome from "../components/BlogHome.astro"
             <Intro />
         </div>    
         <div class="item item-2 projects-grid">
-           <Projects />
+           <ProjectsHome />
         </div>
         <div class="item item-3 blog-grid">
             <BlogHome />
@@ -57,20 +57,7 @@ import BlogHome from "../components/BlogHome.astro"
         border-radius: 20px;
         padding: 15px;
         height: 450px;
-    }
-
-    .item-1 {
         place-self: center;
-    }
-
-    .item-2 {
-
-    }
-
-    .item-3 {
-        font-size: 32px;
-        font-weight: bold;
-        text-align: center;
     }
 
     h1 {
