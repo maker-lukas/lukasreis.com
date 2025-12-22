@@ -1,12 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import ProjectsProjects from "../components/ProjectsProjects.astro";
+import ProjectsGrid from "../components/ProjectsGrid.astro";
 ---
 
 <Layout title="lukas/projecs">
 	<div class="page-grid">
-		<div class="item item-1 projects-grid">
-			<ProjectsProjects />
+		<div class="card projects-grid">
+			<ProjectsGrid />
 		</div>
 	</div>
 </Layout>
@@ -26,15 +26,12 @@ import ProjectsProjects from "../components/ProjectsProjects.astro";
 		grid-gap: 15px;
 	}
 
-    .item {
+    .card {
         width: 100%;
         background-color: #8B5FBF;
         border-radius: 20px;
         padding: 15px;
         height: 700px;
-    }
-
-	.item-1 {
 		align-self: center;
 	}
 </style>

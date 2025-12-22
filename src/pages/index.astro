@@ -7,13 +7,13 @@ import ProjectsHome from "../components/ProjectsHome.astro";
 
 <Layout title="lukas/home">
     <div class="page-grid">
-        <div class="item item-1 intro-grid">
+        <div class="card intro-grid">
             <Intro />
         </div>    
-        <div class="item item-2 projects-grid">
+        <div class="card projects-grid">
            <ProjectsHome />
         </div>
-        <div class="item item-3 blog-grid">
+        <div class="card blog-grid">
             <BlogHome />
         </div>
     </div>
@@ -51,7 +51,7 @@ import ProjectsHome from "../components/ProjectsHome.astro";
         gap: 15px;
     }
     
-    .item {
+    .card {
         width: 100%;
         background-color: #8B5FBF;
         border-radius: 20px;
