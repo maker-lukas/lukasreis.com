@@ -1,28 +1,56 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Link from "../components/Link.astro"
+import Intro from "../components/Intro.astro"
+import Projects from "../components/Projects.astro";
+import BlogHome from "../components/BlogHome.astro"
 ---
 
 <Layout title="lukas/home">
-    <div class="outer-grid">
-        <div class="item item-1 inner-grid">
-            <div class="inner inner-1">1</div>
-            <div class="inner inner-2">2</div>
-            <div class="inner inner-3">3</div>
+    <div class="page-grid">
+        <div class="item item-1 intro-grid">
+            <Intro />
+        </div>    
+        <div class="item item-2 projects-grid">
+           <Projects />
         </div>
-        <div class="item item-2"></div>
-        <div class="item item-3"></div>
+        <div class="item item-3 blog-grid">
+            <BlogHome />
+        </div>
     </div>
 </Layout>
 
 <style>
-    .outer-grid {
+    .page-grid {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, 100vh);
         width: 100%;
     }
 
+    .intro-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "one two"
+            "one three";
+        gap: 15px;
+    }
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 43px auto;
+        grid-gap: 15px;
+    }
+
+    .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 43px auto auto auto;
+        gap: 15px;
+    }
+    
     .item {
         width: 100%;
         background-color: #8B5FBF;
@@ -36,9 +64,7 @@ import Link from "../components/Link.astro"
     }
 
     .item-2 {
-        font-size: 32px;
-        font-weight: bold;
-        text-align: center;
+
     }
 
     .item-3 {
@@ -47,39 +73,7 @@ import Link from "../components/Link.astro"
         text-align: center;
     }
 
-    .inner-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-        "one two"
-        "one three";
-    gap: 15px;
-    align-content: start;
-}
-
-.inner {
-    background-color: #7550A1;
-    border-radius: 10px;
-}
-
-.inner-1 {
-    grid-area: one;
-    height: 100%;
-    background-color:#8B5FBF;
-}
-
-.inner-2 {
-    grid-area: two;
-    height: 285px;
-}
-
-.inner-3 {
-    grid-area: three;
-    height: 120px;
-}
-
-    p {
-        font-size: 24px;
+    h1 {
+        font-size: 32px;
     }
 </style>
