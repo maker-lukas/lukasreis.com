@@ -1,12 +1,18 @@
 ---
+import Dial from "../projects/Dial.astro";
+import Keyboard from "../projects/Keyboard.astro";
 import Link from "./Link.astro";
 ---
 
 <div></div>
 <h1>Projects</h1>
 <div class="see-more"><Link page="/projects"/></div>
-<div class="project">1</div>
-<div class="project">2</div>
+<div class="project">
+    <Keyboard />
+</div>
+<div class="project">
+    <Dial />
+</div>
 <div class="project">3</div>
 
 <style>
