@@ -1,17 +1,21 @@
 ---
+import Age from "./Age.astro";
+
 
 ---
 
 <div class="inner inner-1">
     <h1>Hya! I'm Lukas.</h1>
     <p class="age">A 16 year old human</p>
+    <p class="about">About:</p>
+    <p class="text">A tech nerd, hardware enthusiast, programming noob</p>
 </div>
 <div class="inner inner-2">
     <img class="image"
     src="public/images/lukas.jpg"
     alt="picture of lukas"/>
     <div class="stats">
-        <p>hour </p>
+        <div id="utc-clock">--:--:-- --</div>
         <span>/</span>
         <p>status</p>
     </div>
@@ -61,6 +65,7 @@
         margin-top: 10px;
         font-size: 20px;
         font-weight: bold;
+        margin-bottom: 20px;
     }
 
     .stats {
@@ -79,4 +84,32 @@
         font-weight: bold;
         padding-inline: 15px;
     }
+
+    .about {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .text {
+        font-size: 20px;
+    }
 </style>
+
+<script is:inline>
+    function updateClock() {
+        const zdt = Temporal.Now.instant().toZonedDateTimeISO("UTC");
+
+        let hours = zdt.hour;
+        const minutes = zdt.minute.toString().padStart(2, "0");
+        const seconds = zdt.second.toString().padStart(2, "0");
+
+        const ampm = hours >= 12 ? "pm" : "am";
+        hours = hours % 12 || 12;
+
+        document.getElementById("utc-clock").textContent =
+        `${hours}:${minutes}:${seconds} ${ampm}`;
+    }
+
+    updateClock();
+    setInterval(updateClock, 1000);
+</script>

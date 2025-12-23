@@ -1,18 +1,36 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import BlogGrid from "../components/BlogGrid.astro"
 ---
 
 <Layout title="lukas/blog">
-    <p>Coming Soon!</p>
+	<div class="page-grid">
+		<div class="card blogs-grid">
+			<BlogGrid />
+		</div>
+	</div>
 </Layout>
 
 <style>
-    p{
-		font-weight: bold;
-		font-size: 30px;
+	.page-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 100vh;
+		width: 100%;
+	}
 
-		color: white;	
-		padding: 200px;
-		text-align: center;
-    }
+	.blogs-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 60px repeat(4, 1fr);
+		grid-gap: 15px;
+	}
+
+    .card {
+        background-color: #8B5FBF;
+        border-radius: 20px;
+        padding: 15px;
+        height: 670px;
+		align-self: center;
+	}
 </style>

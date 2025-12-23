@@ -1,18 +1,16 @@
 ---
-import Dial from "../projects/Dial.astro";
-import Keyboard from "../projects/Keyboard.astro";
+import Dial from "../components/projects/Dial.astro";
+import Keyboard from "../components/projects/Keyboard.astro";
+import Firefly from "./projects/Firefly.astro";
+import Xbox from "./projects/Xbox.astro";
 
 ---
 
 <h1>Projects</h1>
-<div class="project">
-    <Keyboard />
-</div>
-<div class="project">
-    <Dial />
-</div>
-<div class="project">3</div>
-<div class="project">4</div>
+<div class="project"><Keyboard /></div>
+<div class="project"><Dial /></div>
+<div class="project"><Firefly /></div>
+<div class="project"><Xbox /></div>
 <div class="project">5</div>
 <div class="project">6</div>
 
@@ -28,5 +26,9 @@ import Keyboard from "../projects/Keyboard.astro";
         font-weight: bold;
         text-align: center;
         grid-column: span 3;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 </style>
