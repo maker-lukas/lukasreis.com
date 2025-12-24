@@ -5,10 +5,13 @@ import Age from "./Age.astro";
 ---
 
 <div class="inner inner-1">
-    <h1>Hya! I'm Lukas.</h1>
-    <p class="age">A 16 year old human</p>
-    <p class="about">About:</p>
-    <p class="text">A tech nerd, hardware enthusiast, programming noob</p>
+    <div class="intro">
+        <h1>Hya! I'm Lukas.</h1>
+        <p class="age">A 16 year old human</p>
+        <p class="about">About:</p>
+        <p class="text">A tech nerd, hardware enthusiast, programming noob.</p>
+    </div>
+    <a href="https://hackclub.com/"><img style="width: 170px;" src="https://assets.hackclub.com/flag-orpheus-left.svg" alt="Hack Club"/></a>
 </div>
 <div class="inner inner-2">
     <img class="image"
@@ -34,6 +37,10 @@ import Age from "./Age.astro";
         grid-area: one;
         height: 100%;
         background-color:#8B5FBF;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     .inner-2 {
@@ -93,6 +100,11 @@ import Age from "./Age.astro";
     .text {
         font-size: 20px;
     }
+
+    .intro {
+        padding-left: 15px;
+    }
+
 </style>
 
 <script is:inline>

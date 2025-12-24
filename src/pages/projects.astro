@@ -14,9 +14,10 @@ import ProjectsGrid from "../components/ProjectsGrid.astro";
 <style>
 	.page-grid {
 		display: grid;
-		grid-template-columns: 1fr;
-		grid-template-rows: 100vh;
-		width: 100%;
+		place-items: center;
+		padding-top: 50px;
+		padding-bottom: 50px;
+		min-height: 100vh;
 	}
 
 	.projects-grid {
@@ -26,11 +27,12 @@ import ProjectsGrid from "../components/ProjectsGrid.astro";
 		grid-gap: 15px;
 	}
 
-    .card {
-        background-color: #8B5FBF;
-        border-radius: 20px;
-        padding: 15px;
-        height: 700px;
+	.card {
+		background-color: #8B5FBF;
+		border-radius: 20px;
+		padding: 20px;
+		height: 700px;
 		align-self: center;
 	}
+
 </style>
