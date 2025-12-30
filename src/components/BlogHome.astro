@@ -1,31 +1,59 @@
 ---
-import Link from "./Link.astro";
+import { getCollection } from 'astro:content';
+import FormattedDate from '../components/FarmattedDate.astro';
+
+const posts = (await getCollection('blog')).sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+).slice(0, 3);
 ---
 
-<div></div>
-<h1>Blog</h1>
-<div class="see-more"><Link page="/blog"/></div>
-<div class="blog">1</div>
-<div class="blog">2</div>
-<div class="blog">3</div>
+{posts.length === 0 && <p class="empty">No posts yet :(</p>}
+
+{posts.map((post) => (
+    <div class="post-card">
+        <span></span>
+        <div class="data">
+            <div>
+                <h1>{post.data.title}</h1>
+                <p class="description">{post.data.description}</p>
+            </div>
+            <p class="meta">
+                Published on <FormattedDate date={post.data.pubDate} />
+            </p>
+        </div>
+        <div class="read-post">
+            <a href={`/blog/${post.id}`}>Read Post →</a>
+        </div>
+    </div>
+))}
 
 <style>
-    .see-more {
-        text-align: end;
-        margin-top: auto;
-        margin-bottom: auto;
+    .data {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
-    .blog {
-        padding: 15px;
-        background-color: #7550A1;
-        grid-column: span 3;
+    .post-card {
+        background-color:#7550A1;
         border-radius: 10px;
+        padding: 15px;
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+    }
+    
+
+    a {
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
     }
 
-    h1{
-        font-size: 32px;
-        font-weight: bold;
-        text-align: center;
+    h1 {
+        font-size: 20px;
+    }
+
+    .read-post {
+        text-align: end;
     }
 </style>

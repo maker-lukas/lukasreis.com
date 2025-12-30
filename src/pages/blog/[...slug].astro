@@ -1,0 +1,24 @@
+---
+import { type CollectionEntry, getCollection, render } from 'astro:content';
+import BlogPost from '../../layouts/BlogPost.astro';
+
+// This is used to generate static paths for all blog posts
+export async function getStaticPaths() {
+    const posts = await getCollection('blog');
+    return posts.map((post) => ({
+        params: { slug: post.id },
+        props: post,
+    }));
+}
+
+// Get the blog post data from props
+type Props = CollectionEntry<'blog'>;
+const post = Astro.props;
+
+// Render the markdown content to HTML
+const { Content } = await render(post);
+---
+
+<BlogPost {...post.data}>
+    <Content />
+</BlogPost>

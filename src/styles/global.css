@@ -31,3 +31,9 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.link {
+	text-align: end;
+	margin-top: auto;
+	margin-bottom: auto;
+}

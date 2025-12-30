@@ -1,27 +1,62 @@
 ---
+import { getCollection } from 'astro:content';
+import FormattedDate from '../components/FarmattedDate.astro';
 
+const posts = (await getCollection('blog')).sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
 ---
 
-<h1>Blog</h1>
-<div class="blog"><p>Comming Soon</p><p>Need to work on backend first</p></div>
-<div class="blog">Coming Soon</div>
-<div class="blog">Coming Soon</div>
-<div class="blog">Coming Soon</div>
+{posts.length === 0 && <p class="empty">No posts yet :(</p>}
+
+{posts.map((post) => (
+    <div class="post-card">
+        <span></span>
+        <div class="data">
+            <div>
+                <h1>{post.data.title}</h1>
+                <p class="description">{post.data.description}</p>
+            </div>
+            <p class="meta">
+                Published on <FormattedDate date={post.data.pubDate} />
+            </p>
+        </div>
+        <div class="read-post">
+            <a href={`/blog/${post.id}`}>Read Post →</a>
+        </div>
+    </div>
+))}
 
 <style>
-    .blog {
-        padding: 15px;
-        background-color: #7550A1;
+    .data {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .post-card {
+        background-color:#7550A1;
         border-radius: 10px;
-        text-align: center;
+        padding: 15px;
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+    
+        /* &:not(:first-child) {
+            margin-top: 15px;
+        } */
+    }
+
+    a {
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
     }
 
     h1 {
-        font-size: 32px;
-        font-weight: bold;
+        font-size: 20px;
+    }
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .read-post {
+        text-align: end;
     }
 </style>

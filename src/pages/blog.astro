@@ -1,11 +1,12 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import BlogGrid from "../components/BlogGrid.astro"
+import BlogGrid from '../components/BlogGrid.astro';
+import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="lukas/blog">
 	<div class="page-grid">
 		<div class="card blogs-grid">
+            <h1>Blog</h1>
 			<BlogGrid />
 		</div>
 	</div>
@@ -22,7 +23,7 @@ import BlogGrid from "../components/BlogGrid.astro"
 	.blogs-grid {
 		display: grid;
 		grid-template-columns: 1fr;
-		grid-template-rows: 60px repeat(4, 1fr);
+		grid-template-rows: 43px repeat(3, 130px);
 		grid-gap: 15px;
 	}
 
@@ -30,7 +31,14 @@ import BlogGrid from "../components/BlogGrid.astro"
         background-color: #8B5FBF;
         border-radius: 20px;
         padding: 15px;
-        height: 670px;
+        height: auto;
 		align-self: center;
+        text-align: center;
+	}
+
+	h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
 	}
 </style>

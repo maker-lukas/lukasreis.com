@@ -1,0 +1,85 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+import FormattedDate from '../components/FarmattedDate.astro';
+
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+type Props = CollectionEntry<'blog'>['data'];
+const { title, description, pubDate } = Astro.props;
+const id = Astro.url.pathname.split('/').pop();
+
+
+---
+<title>lukas/blog/{id}</title>
+<body>
+    <Header />
+    <main>
+        <div class="page-grid">
+            <div class="card">
+                <div class="frontmatter">
+                    <h1>{title}</h1>
+                    <p class="description">{description}</p>
+                    <p class="date">
+                        <FormattedDate date={pubDate} />
+                    </p>
+                </div>
+                <slot />
+            </div>
+        </div>
+    </main>
+    <Footer />
+</body>
+
+
+<style>
+    .frontmatter {
+        text-align: center;
+        background-color: #7550A1;
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+	.page-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 100vh;
+		width: 100%;
+	}
+
+    .card {
+        background-color: #8B5FBF;
+        border-radius: 20px;
+        padding: 15px;
+        height: auto;
+        
+		align-self: center;
+    }
+
+    h1 {
+        font-size: 32px;
+        padding-bottom: 10px;
+    }
+
+    .date {
+        font-weight: bold;
+        padding-top: 10px;
+    }
+
+    :global(pre) {
+        background-color:#171717 !important;
+        padding: 15px;
+        border-radius: 10px;
+        overflow-x: auto;
+        margin-top: 15px;
+    }
+
+    :global(code) {
+        font-size: 14px;
+    }
+
+
+</style>
