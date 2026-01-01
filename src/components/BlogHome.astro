@@ -2,9 +2,12 @@
 import { getCollection } from 'astro:content';
 import FormattedDate from '../components/FarmattedDate.astro';
 
-const posts = (await getCollection('blog')).sort(
-    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-).slice(0, 3);
+const posts = (await getCollection('blog'))
+    .filter(post => !post.data.draft)
+    .sort(
+        (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+    )
+    .slice(0, 3);
 ---
 
 {posts.length === 0 && <p class="empty">No posts yet :(</p>}

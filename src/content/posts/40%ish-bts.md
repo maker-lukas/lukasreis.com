@@ -1,6 +1,6 @@
 ---
 title: 40%ish Split Keyboard
-description: In depth talk on how i made my own split keyboard
+description: Bts on how i made my own split keyboard
 pubDate: Dec 30 2025
 ---
 
@@ -122,7 +122,7 @@ The other side is pretty ugly, but who cares—it’s always facing the table:
 
 Here it is with the keyboard:
 
-![[H30B0339.jpg]]
+![test](/public/images/keyboard.jpg)
 
 It works fabulously!
 

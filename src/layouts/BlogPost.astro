@@ -13,7 +13,13 @@ const id = Astro.url.pathname.split('/').pop();
 
 
 ---
-<title>lukas/blog/{id}</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>lukas/blog/{id}</title>
+</head>
 <body>
     <Header />
     <main>
@@ -21,8 +27,8 @@ const id = Astro.url.pathname.split('/').pop();
             <div class="card">
                 <div class="frontmatter">
                     <h1>{title}</h1>
-                    <p class="description">{description}</p>
-                    <p class="date">
+                    <p>{description}</p>
+                    <p>
                         <FormattedDate date={pubDate} />
                     </p>
                 </div>
@@ -32,7 +38,7 @@ const id = Astro.url.pathname.split('/').pop();
     </main>
     <Footer />
 </body>
-
+</html>
 
 <style>
     .frontmatter {
@@ -45,9 +51,10 @@ const id = Astro.url.pathname.split('/').pop();
 
 	.page-grid {
 		display: grid;
-		grid-template-columns: 1fr;
-		grid-template-rows: 100vh;
-		width: 100%;
+		place-items: center;
+		padding-top: 100px;
+		padding-bottom: 50px;
+		min-height: 100vh;
 	}
 
     .card {
@@ -55,20 +62,13 @@ const id = Astro.url.pathname.split('/').pop();
         border-radius: 20px;
         padding: 15px;
         height: auto;
-        
-		align-self: center;
+        width: 100%;
     }
 
     h1 {
         font-size: 32px;
-        padding-bottom: 10px;
     }
-
-    .date {
-        font-weight: bold;
-        padding-top: 10px;
-    }
-
+    
     :global(pre) {
         background-color:#171717 !important;
         padding: 15px;
@@ -81,5 +81,25 @@ const id = Astro.url.pathname.split('/').pop();
         font-size: 14px;
     }
 
+    :global(p) {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+    :global(ol),
+    :global(ul) {
+        margin-left: 20px;
+        margin-bottom: 15px;
+    }
+
+    :global(li) {
+        margin-bottom: 8px;
+        line-height: 1.6;
+    }
+
+    :global(img) {
+        max-width: 100%;
+        border-radius: 10px;
+    }
 
 </style>

@@ -1,5 +1,4 @@
 ---
-import Age from "./Age.astro";
 
 
 ---
@@ -7,9 +6,9 @@ import Age from "./Age.astro";
 <div class="inner inner-1">
     <div class="intro">
         <h1>Hya! I'm Lukas.</h1>
-        <p class="age">A 16 y/o human</p>
+        <p class="age">A 16 year old human</p>
         <p class="about">About:</p>
-        <p class="text">A tech nerd, hardware enthusiast, programming noob.</p>
+        <p class="text">A home schooled tech nerd, hardware enthusiast, programming noob.</p>
         
     </div>
     <a href="https://hackclub.com/"><img style="width: 170px;" src="https://assets.hackclub.com/flag-orpheus-left.svg" alt="Hack Club"/></a>
@@ -25,7 +24,8 @@ import Age from "./Age.astro";
     </div>
 </div>
 <div class="inner inner-3">
-    Now Playing
+    <p>Now Playing</p>
+    <p>Still need to setup a backend for this</p>
 </div>
 
 <style>
@@ -108,11 +108,10 @@ import Age from "./Age.astro";
 
 <script is:inline>
     function updateClock() {
-        const zdt = Temporal.Now.instant().toZonedDateTimeISO("UTC");
-
-        let hours = zdt.hour;
-        const minutes = zdt.minute.toString().padStart(2, "0");
-        const seconds = zdt.second.toString().padStart(2, "0");
+        const now = new Date();
+        let hours = now.getUTCHours();
+        const minutes = now.getUTCMinutes().toString().padStart(2, "0");
+        const seconds = now.getUTCSeconds().toString().padStart(2, "0");
 
         const ampm = hours >= 12 ? "pm" : "am";
         hours = hours % 12 || 12;
