@@ -1,6 +1,6 @@
 # lukasreis.com
 
-My personal website made with astro 
+My personal [website](https://lukasreis.com) made with [Astro](https://astro.build) 
 
 it contains:
 
