@@ -63,6 +63,7 @@ const id = Astro.url.pathname.split('/').pop();
         padding: 15px;
         height: auto;
         width: 100%;
+        max-width: 810px;
     }
 
     h1 {
@@ -75,10 +76,14 @@ const id = Astro.url.pathname.split('/').pop();
         border-radius: 10px;
         overflow-x: auto;
         margin-top: 15px;
+        margin-bottom: 15px;
+        max-width: 100%;
     }
 
     :global(code) {
         font-size: 14px;
+        white-space: pre;
+        word-break: normal;
     }
 
     :global(p) {
@@ -102,4 +107,45 @@ const id = Astro.url.pathname.split('/').pop();
         border-radius: 10px;
     }
 
+    :global(a) {
+        color: white;
+        font-weight: bold;
+    }
+
+    :global(.download-link:link) {
+        text-decoration: underline;
+    }
+
+    :global(.download-link:hover, .download-link:active) {
+        text-decoration: none;
+    }
+
+    :global(.warning) {
+        color: yellow;
+    }
+
+    :global(h2) {
+        margin-top: 1.5em;
+        margin-bottom: 0.5em;
+    }
+
+    :global(hr) {
+        border: none;
+        border-top: 2px solid #ECD444;
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+    }
+
+    :global(h3) {
+        margin-top: 1.25em;
+        margin-bottom: 0.5em;
+    }
+
+    :global(.codelet) {
+        background-color: #171717;
+        border-radius: 5px;
+        padding-inline: 3px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
 </style>
