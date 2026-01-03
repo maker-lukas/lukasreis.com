@@ -1,6 +1,6 @@
 ---
 title: What is Hack Club?
-description: This is a post
+description: Test/Draft Post
 pubDate: Dec 27 2025
 ---
 

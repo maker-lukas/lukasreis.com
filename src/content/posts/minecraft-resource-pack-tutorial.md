@@ -1,7 +1,7 @@
 ---
 title: Minecraft Enchanted Textures Tutorial
 description: Learn how to make enchantment specific item textures
-pubDate: Jan 04 2026
+pubDate: Jan 02 2026
 ---
 
 ## Before You Start

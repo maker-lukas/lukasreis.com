@@ -1,13 +1,8 @@
 ---
 title: 40%ish Split Keyboard
-description: Bts on how i made my own split keyboard
+description: Test/Draft post
 pubDate: Dec 30 2025
 ---
-
-Hi Kyu!
-
-Lukas here! We met in the Beagle Symposium. If you don't remember, well, Tracy must have already shown my keyboard a few times, but I wanted to send this email to talk about it a bit in more depth—like the process of making it and building it.
-
 
 So everything started a few weeks after you left. You inspired me a lot, so I started to learn Dvorak and touch typing. It's pretty easy to learn touch typing mainly because in Dvorak I could not already look at the keyboard. I found this website, keybr.com, which helped me a lot. The other thing was just changing my layout to Dvorak and typing just typing. I got pretty fast using Dvorak; I was getting around 50 wpm in 2 weeks.
 
