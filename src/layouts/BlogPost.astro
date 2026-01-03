@@ -18,6 +18,7 @@ const id = Astro.url.pathname.split('/').pop();
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width" />
+	<link rel="icon" type="image/svg+xml" href="../images/icon.svg" />
 	<title>lukas/blog/{id}</title>
 </head>
 <body>
@@ -103,7 +104,8 @@ const id = Astro.url.pathname.split('/').pop();
     }
 
     :global(img) {
-        max-width: 100%;
+        width: 100%;
+        height: auto;
         border-radius: 10px;
     }
 
