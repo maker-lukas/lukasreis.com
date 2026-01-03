@@ -144,7 +144,7 @@ In my texture i want the Fire Aspect under the sword texture but if you have cus
   }
 }
 ```
-Note: Texture paths never include .png
+> Note: Texture paths never include .png
 
 ---
 
