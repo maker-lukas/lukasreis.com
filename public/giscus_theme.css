@@ -65,7 +65,7 @@ main {
     --color-fg-subtle: #ffff00;
     --color-canvas-default: #ffff00;
     --color-canvas-overlay: #ffff00;
-    --color-canvas-inset: #ffff00;
+    --color-canvas-inset: #171717;
     --color-canvas-subtle: #ffff00;
     --color-border-default: #ffff00;
     --color-border-muted: #ffff00;
@@ -128,13 +128,3 @@ main .gsc-loading-image {
     background-image: url(https://github.githubassets.com/images/mona-loading-dimmed.gif)
 }
 
-.gsc-comment-box textarea {
-    background-color: #171717 !important;
-    color: #ffff00 !important;
-    border: 1px solid #ffff00 !important;
-}
-
-textarea {
-    background-color: #171717 !important;
-    color: #ffff00 !important;
-}
