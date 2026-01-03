@@ -34,7 +34,7 @@
     --color-prettylights-syntax-brackethighlighter-angle: #768390;
     --color-prettylights-syntax-sublimelinter-gutter-mark: #545d68;
     --color-prettylights-syntax-constant-other-reference-link: #96d0ff;
-    --color-btn-text: #adbac7;
+    --color-btn-text: #fff;
     --color-btn-bg: #373e47;
     --color-btn-border: #cdd9e51a;
     --color-btn-shadow: 0 0 #0000;
@@ -133,6 +133,7 @@ main .gsc-loading-image {
     color: #fff !important
 }
 
-.gsc {
-    color: #fff
+.gsc,
+.gsc * {
+    color: #fff !important
 }
