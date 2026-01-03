@@ -128,7 +128,13 @@ main .gsc-loading-image {
     background-image: url(https://github.githubassets.com/images/mona-loading-dimmed.gif)
 }
 
-textarea.gsc-textarea {
+.gsc-comment-box textarea {
+    background-color: #171717 !important;
+    color: #ffff00 !important;
+    border: 1px solid #ffff00 !important;
+}
+
+textarea {
     background-color: #171717 !important;
     color: #ffff00 !important;
 }
