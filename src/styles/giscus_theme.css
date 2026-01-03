@@ -122,3 +122,7 @@ main .pagination-loader-container {
 main .gsc-loading-image {
     background-image: url(https://github.githubassets.com/images/mona-loading-dimmed.gif)
 }
+
+.gsc-comment-box textarea {
+    background-color: #171717;
+}
