@@ -4,7 +4,7 @@
  * https://github.com/primer/primitives/blob/main/LICENSE
  */
 main {
---color-prettylights-syntax-comment: white;
+--color-prettylights-syntax-comment: #ECD444;
 --color-prettylights-syntax-constant: #FFA500;
 --color-prettylights-syntax-entity: #FFFF00;
 --color-prettylights-syntax-storage-modifier-import: #00FF00;
@@ -16,7 +16,7 @@ main {
 --color-prettylights-syntax-invalid-illegal-text: #00FA9A;
 --color-prettylights-syntax-invalid-illegal-bg: #FFB6C1;
 --color-prettylights-syntax-carriage-return-text: #006400;
---color-prettylights-syntax-carriage-return-bg: black;
+--color-prettylights-syntax-carriage-return-bg: #DC143C;
 --color-prettylights-syntax-string-regexp: #4169E1;
 --color-prettylights-syntax-markup-list: #32CD32;
 --color-prettylights-syntax-markup-heading: #FF4500;
@@ -44,7 +44,7 @@ main {
 --color-btn-hover-border: #FF00FF;
 --color-btn-active-bg: #1E90E0;          /* was duplicate family */
 --color-btn-active-border: #0000E6;      /* was #0000FF */
---color-btn-selected-bg: grey;        /* was #FF0000 */
+--color-btn-selected-bg: white;        /* was #FF0000 */
 
 --color-btn-primary-text: #00FF33;       /* was #00FF00 */
 --color-btn-primary-bg: #FFD933;         /* was #FFD700 */
@@ -81,7 +81,7 @@ main {
 --color-accent-fg: #00F0A5;               /* was #00FA9A */
 --color-accent-emphasis: #FFC1D8;         /* was #FFB6C1 */
 --color-accent-muted: #007000;            /* was #006400 */
---color-accent-subtle: white;            /* was #DC143C */
+--color-accent-subtle: #D11A3A;            /* was #DC143C */
 
 --color-success-fg: #3A66D6;              /* was #4169E1 */
 --color-attention-fg: #2EB82E;            /* was #32CD32 */
