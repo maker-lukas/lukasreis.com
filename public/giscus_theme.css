@@ -1,86 +1,91 @@
 main {
-  /* Base */
-  --color-canvas-default: #745092;
-  --color-canvas-overlay: #6a477f;
-  --color-canvas-inset: #6a477f;
-  --color-canvas-subtle: #6f4a8e;
+  /* Base backgrounds */
+  --color-canvas-default: #7550A1;
+  --color-canvas-overlay: #7550A1;
+  --color-canvas-inset: #8B5FBF;
+  --color-canvas-subtle: #8B5FBF;
 
   /* Text */
   --color-fg-default: #ffffff;
-  --color-fg-muted: #e3d7ee;
-  --color-fg-subtle: #cbb9dc;
+  --color-fg-muted: #e6d9f2;
+  --color-fg-subtle: #d2c2e8;
 
   /* Borders */
-  --color-border-default: #e6d9f2;
-  --color-border-muted: #d7c6ea;
+  --color-border-default: rgba(255, 255, 255, 0.6);
+  --color-border-muted: rgba(255, 255, 255, 0.4);
 
   /* Buttons */
   --color-btn-bg: transparent;
   --color-btn-text: #ffffff;
-  --color-btn-border: #e6d9f2;
-  --color-btn-hover-bg: rgba(255, 255, 255, 0.08);
+  --color-btn-border: rgba(255, 255, 255, 0.8);
+  --color-btn-hover-bg: rgba(255, 255, 255, 0.12);
   --color-btn-hover-border: #ffffff;
-  --color-btn-active-bg: rgba(255, 255, 255, 0.12);
+  --color-btn-active-bg: rgba(255, 255, 255, 0.18);
 
-  /* Primary buttons (Reply / Comment) */
+  /* Primary buttons */
   --color-btn-primary-bg: transparent;
   --color-btn-primary-text: #ffffff;
   --color-btn-primary-border: #ffffff;
-  --color-btn-primary-hover-bg: rgba(255, 255, 255, 0.12);
+  --color-btn-primary-hover-bg: rgba(255, 255, 255, 0.15);
   --color-btn-primary-hover-border: #ffffff;
-  --color-btn-primary-selected-bg: rgba(255, 255, 255, 0.16);
+  --color-btn-primary-selected-bg: rgba(255, 255, 255, 0.2);
 
-  /* Inputs */
-  --color-neutral-muted: rgba(255, 255, 255, 0.15);
-
-  /* Accent (icons, links, reactions) */
+  /* Accents */
   --color-accent-fg: #ffffff;
   --color-accent-emphasis: #ffffff;
   --color-accent-muted: rgba(255, 255, 255, 0.35);
-  --color-accent-subtle: rgba(255, 255, 255, 0.15);
+  --color-accent-subtle: rgba(255, 255, 255, 0.18);
 
   /* Reactions */
   --color-social-reaction-bg-hover: rgba(255, 255, 255, 0.15);
   --color-social-reaction-bg-reacted-hover: rgba(255, 255, 255, 0.25);
 }
 
-/* Containers */
+/* Cards / containers */
 .gsc-comments,
 .gsc-comment-box,
-.gsc-timeline {
-  background: transparent;
-}
-
-/* Comment cards */
+.gsc-timeline,
 .gsc-comment {
-  background-color: #6a477f;
+  background-color: #8B5FBF;
   border: 1px solid var(--color-border-default);
-  border-radius: 6px;
+  border-radius: 10px;
 }
 
-/* Textareas */
+/* Comment card spacing */
+.gsc-comment {
+  margin-bottom: 1rem;
+}
+
+/* Textarea */
 .gsc-comment-box-textarea {
-  background-color: #6a477f;
+  background-color: #8B5FBF;
   color: #ffffff;
   border: 1px solid var(--color-border-default);
+  border-radius: 10px;
 }
 
 .gsc-comment-box-textarea::placeholder {
-  color: #d8c9e8;
+  color: #e6d9f2;
 }
 
-/* Header + footer */
+/* Buttons */
+.gsc-comment-box button,
+.gsc-comment-footer button {
+  border-radius: 10px;
+}
+
+/* Header + footer borders */
 .gsc-header,
 .gsc-comment-footer {
   border-color: var(--color-border-default);
 }
 
-/* Hide reaction counter like your screenshot */
+/* Hide reaction count */
 .gsc-reactions-count {
   display: none;
 }
 
-/* Timeline order (your existing behavior) */
+/* Timeline order */
 .gsc-timeline {
   flex-direction: column-reverse;
 }
