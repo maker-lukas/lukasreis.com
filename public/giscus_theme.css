@@ -44,7 +44,7 @@ main {
 --color-btn-hover-border: #FF00FF;
 --color-btn-active-bg: #1E90E0;          /* was duplicate family */
 --color-btn-active-border: #0000E6;      /* was #0000FF */
---color-btn-selected-bg: white;        /* was #FF0000 */
+--color-btn-selected-bg: #ECD444;        /* was #FF0000 */
 
 --color-btn-primary-text: #00FF33;       /* was #00FF00 */
 --color-btn-primary-bg: #FFD933;         /* was #FFD700 */
