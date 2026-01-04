@@ -4,86 +4,99 @@
  * https://github.com/primer/primitives/blob/main/LICENSE
  */
 main {
-    --color-prettylights-syntax-comment: #FF0000;
-    --color-prettylights-syntax-constant: #FFA500;
-    --color-prettylights-syntax-entity: #FFFF00;
-    --color-prettylights-syntax-storage-modifier-import: #00FF00;
-    --color-prettylights-syntax-entity-tag: #00FFFF;
-    --color-prettylights-syntax-keyword: #0000FF;
-    --color-prettylights-syntax-string: #ECD444;
-    --color-prettylights-syntax-variable: #8B00FF;
-    --color-prettylights-syntax-brackethighlighter-unmatched: #FF1493;
-    --color-prettylights-syntax-invalid-illegal-text: #00FA9A;
-    --color-prettylights-syntax-invalid-illegal-bg: #FFB6C1;
-    --color-prettylights-syntax-carriage-return-text: #006400;
-    --color-prettylights-syntax-carriage-return-bg: #DC143C;
-    --color-prettylights-syntax-string-regexp: #4169E1;
-    --color-prettylights-syntax-markup-list: #32CD32;
-    --color-prettylights-syntax-markup-heading: #FF4500;
-    --color-prettylights-syntax-markup-italic: #9932CC;
-    --color-prettylights-syntax-markup-bold: #1E90FF;
-    --color-prettylights-syntax-markup-deleted-text: #FF6347;
-    --color-prettylights-syntax-markup-deleted-bg: #20B2AA;
-    --color-prettylights-syntax-markup-inserted-text: #7CFC00;
-    --color-prettylights-syntax-markup-inserted-bg: #FF69B4;
-    --color-prettylights-syntax-markup-changed-text: #00CED1;
-    --color-prettylights-syntax-markup-changed-bg: #FFD700;
-    --color-prettylights-syntax-markup-ignored-text: #FF8C00;
-    --color-prettylights-syntax-markup-ignored-bg: #BA55D3;
-    --color-prettylights-syntax-meta-diff-range: #00FF7F;
-    --color-prettylights-syntax-brackethighlighter-angle: #CD5C5C;
-    --color-prettylights-syntax-sublimelinter-gutter-mark: #0000CD;
-    --color-prettylights-syntax-constant-other-reference-link: #228B22;
-    --color-btn-text: #800000;
-    --color-btn-bg: #008000;
-    --color-btn-border: #000080;
-    --color-btn-shadow: 0 0 #800080;
-    --color-btn-inset-shadow: 0 0 #008080;
-    --color-btn-hover-bg: #808000;
-    --color-btn-hover-border: #FF00FF;
-    --color-btn-active-bg: #1E90FF;
-    --color-btn-active-border: #0000FF;
-    --color-btn-selected-bg: #FF0000;
-    --color-btn-primary-text: #00FF00;
-    --color-btn-primary-bg: #FFD700;
-    --color-btn-primary-border: #FF6347;
-    --color-btn-primary-shadow: 0 0 #20B2AA;
-    --color-btn-primary-inset-shadow: 0 0 #DEB887;
-    --color-btn-primary-hover-bg: #FF4500;
-    --color-btn-primary-hover-border: #9932CC;
-    --color-btn-primary-selected-bg: #1E90FF;
-    --color-btn-primary-selected-shadow: 0 0 #FF1493;
-    --color-btn-primary-disabled-text: #00FA9A;
-    --color-btn-primary-disabled-bg: #FFB6C1;
-    --color-btn-primary-disabled-border: #006400;
-    --color-action-list-item-default-hover-bg: #DC143C;
-    --color-segmented-control-bg: #4169E1;
-    --color-segmented-control-button-bg: #32CD32;
-    --color-segmented-control-button-selected-border: #B0C4DE;
-    --color-fg-default: #ffff;
-    --color-fg-muted: #00FFFF;
-    --color-fg-subtle: #FFFF00;
-    --color-canvas-default: #171717;
-    --color-canvas-overlay: #90EE90;
-    --color-canvas-inset: #0000FF;
-    --color-canvas-subtle: #FF00FF;
-    --color-border-default: #FFFF00;
-    --color-border-muted: #FFA500;
-    --color-neutral-muted: #FF1493;
-    --color-accent-fg: #00FA9A;
-    --color-accent-emphasis: #FFB6C1;
-    --color-accent-muted: #006400;
-    --color-accent-subtle: #DC143C;
-    --color-success-fg: #4169E1;
-    --color-attention-fg: #32CD32;
-    --color-attention-muted: #FF4500;
-    --color-attention-subtle: #9932CC;
-    --color-danger-fg: #1E90FF;
-    --color-danger-muted: #FF6347;
-    --color-danger-subtle: #20B2AA;
-    --color-primer-shadow-inset: 0 0 #7CFC00;
-    --color-scale-gray-7: #FF69B4;
-    --color-scale-blue-8: #00CED1;
+--color-prettylights-syntax-comment: #FF0000;
+--color-prettylights-syntax-constant: #FFA500;
+--color-prettylights-syntax-entity: #FFFF00;
+--color-prettylights-syntax-storage-modifier-import: #00FF00;
+--color-prettylights-syntax-entity-tag: #00FFFF;
+--color-prettylights-syntax-keyword: #0000FF;
+--color-prettylights-syntax-string: #ECD444;
+--color-prettylights-syntax-variable: #8B00FF;
+--color-prettylights-syntax-brackethighlighter-unmatched: #FF1493;
+--color-prettylights-syntax-invalid-illegal-text: #00FA9A;
+--color-prettylights-syntax-invalid-illegal-bg: #FFB6C1;
+--color-prettylights-syntax-carriage-return-text: #006400;
+--color-prettylights-syntax-carriage-return-bg: #DC143C;
+--color-prettylights-syntax-string-regexp: #4169E1;
+--color-prettylights-syntax-markup-list: #32CD32;
+--color-prettylights-syntax-markup-heading: #FF4500;
+--color-prettylights-syntax-markup-italic: #9932CC;
+--color-prettylights-syntax-markup-bold: #1E90FF;
+--color-prettylights-syntax-markup-deleted-text: #FF6347;
+--color-prettylights-syntax-markup-deleted-bg: #20B2AA;
+--color-prettylights-syntax-markup-inserted-text: #7CFC00;
+--color-prettylights-syntax-markup-inserted-bg: #FF69B4;
+--color-prettylights-syntax-markup-changed-text: #00CED1;
+--color-prettylights-syntax-markup-changed-bg: #FFD700;
+--color-prettylights-syntax-markup-ignored-text: #FF8C00;
+--color-prettylights-syntax-markup-ignored-bg: #BA55D3;
+--color-prettylights-syntax-meta-diff-range: #00FF7F;
+--color-prettylights-syntax-brackethighlighter-angle: #CD5C5C;
+--color-prettylights-syntax-sublimelinter-gutter-mark: #0000CD;
+--color-prettylights-syntax-constant-other-reference-link: #228B22;
+
+--color-btn-text: #800000;
+--color-btn-bg: #008000;
+--color-btn-border: #000080;
+--color-btn-shadow: 0 0 #800080;
+--color-btn-inset-shadow: 0 0 #008080;
+--color-btn-hover-bg: #808000;
+--color-btn-hover-border: #FF00FF;
+--color-btn-active-bg: #1E90E0;          /* was duplicate family */
+--color-btn-active-border: #0000E6;      /* was #0000FF */
+--color-btn-selected-bg: #FF1A1A;        /* was #FF0000 */
+
+--color-btn-primary-text: #00FF33;       /* was #00FF00 */
+--color-btn-primary-bg: #FFD933;         /* was #FFD700 */
+--color-btn-primary-border: #FF6F61;     /* was #FF6347 */
+--color-btn-primary-shadow: 0 0 #20C9AA; /* was #20B2AA */
+--color-btn-primary-inset-shadow: 0 0 #DEB887;
+--color-btn-primary-hover-bg: #FF5722;   /* was #FF4500 */
+--color-btn-primary-hover-border: #9B30FF; /* was #9932CC */
+--color-btn-primary-selected-bg: #1E88FF; /* was #1E90FF */
+--color-btn-primary-selected-shadow: 0 0 #FF2A9D; /* was #FF1493 */
+--color-btn-primary-disabled-text: #00F5A0; /* was #00FA9A */
+--color-btn-primary-disabled-bg: #FFBFD1; /* was #FFB6C1 */
+--color-btn-primary-disabled-border: #005A00; /* was #006400 */
+
+--color-action-list-item-default-hover-bg: #D3163A; /* was #DC143C */
+--color-segmented-control-bg: #3F63E0; /* was #4169E1 */
+--color-segmented-control-button-bg: #30C030; /* was #32CD32 */
+--color-segmented-control-button-selected-border: #B0C4DE;
+
+--color-fg-default: #FFFFFF;             /* fixed invalid #ffff */
+--color-fg-muted: #00E6E6;               /* was #00FFFF */
+--color-fg-subtle: #FFF04D;              /* was #FFFF00 */
+
+--color-canvas-default: #171717;
+--color-canvas-overlay: #8FEE8F;          /* was #90EE90 */
+--color-canvas-inset: #0000CC;            /* was #0000FF */
+--color-canvas-subtle: #FF00CC;            /* was #FF00FF */
+
+--color-border-default: #FFE600;          /* was #FFFF00 */
+--color-border-muted: #FFAD33;            /* was #FFA500 */
+
+--color-neutral-muted: #FF2FA3;           /* was #FF1493 */
+
+--color-accent-fg: #00F0A5;               /* was #00FA9A */
+--color-accent-emphasis: #FFC1D8;         /* was #FFB6C1 */
+--color-accent-muted: #007000;            /* was #006400 */
+--color-accent-subtle: #D11A3A;            /* was #DC143C */
+
+--color-success-fg: #3A66D6;              /* was #4169E1 */
+--color-attention-fg: #2EB82E;            /* was #32CD32 */
+--color-attention-muted: #FF5A1F;         /* was #FF4500 */
+--color-attention-subtle: #9F3BE0;         /* was #9932CC */
+
+--color-danger-fg: #1C86EE;               /* was #1E90FF */
+--color-danger-muted: #FF6A55;            /* was #FF6347 */
+--color-danger-subtle: #22B8B0;            /* was #20B2AA */
+
+--color-primer-shadow-inset: 0 0 #80FF1A; /* was #7CFC00 */
+
+--color-scale-gray-7: #FF75C3;            /* was #FF69B4 */
+--color-scale-blue-8: #00D6DB;            /* was #00CED1 */
+
 
     /*! Extensions from @primer/css/alerts/flash.scss */
     --color-social-reaction-bg-hover: var(--color-scale-gray-7);
