@@ -48,7 +48,6 @@ main {
 .gsc-comment {
   background-color: #8B5FBF;
   border: 1px solid var(--color-border-default);
-  border-radius: 10px;
 }
 
 /* Comment card spacing */
@@ -61,7 +60,6 @@ main {
   background-color: #8B5FBF;
   color: #ffffff;
   border: 1px solid var(--color-border-default);
-  border-radius: 10px;
 }
 
 .gsc-comment-box-textarea::placeholder {
@@ -71,7 +69,6 @@ main {
 /* Buttons */
 .gsc-comment-box button,
 .gsc-comment-footer button {
-  border-radius: 10px;
 }
 
 /* Header + footer borders */
