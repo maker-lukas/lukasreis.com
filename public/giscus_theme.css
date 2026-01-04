@@ -71,7 +71,7 @@ main {
 --color-canvas-default: #171717;
 --color-canvas-overlay: #8FEE8F;          /* was #90EE90 */
 --color-canvas-inset: #0000CC;            /* was #0000FF */
---color-canvas-subtle: #FF00CC;            /* was #FF00FF */
+--color-canvas-subtle: #ECD444;            /* was #FF00FF */
 
 --color-border-default: #FFE600;          /* was #FFFF00 */
 --color-border-muted: #FFAD33;            /* was #FFA500 */
