@@ -11,8 +11,8 @@ main {
   --color-fg-subtle: #d2c2e8;
 
   /* Borders */
-  --color-border-default: #e6d9f2;
-  --color-border-muted: #d7c6ea;
+  --color-border-default: #ffffff;
+  --color-border-muted: #ffffff;
 
   /* Buttons */
   --color-btn-bg: transparent;
@@ -65,7 +65,7 @@ main {
 }
 
 .gsc-comment-box-textarea::placeholder {
-  color: #e6d9f2;
+  color: #ffffff;
 }
 
 /* Header + footer */
@@ -74,12 +74,6 @@ main {
   border-color: var(--color-border-default);
 }
 
-/* Hide reaction counter like your screenshot */
-.gsc-reactions-count {
-  display: none;
-}
-
-/* Timeline order (your existing behavior) */
 .gsc-timeline {
   flex-direction: column-reverse;
 }
