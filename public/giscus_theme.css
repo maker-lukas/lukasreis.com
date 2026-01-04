@@ -65,15 +65,15 @@ main {
 --color-segmented-control-button-selected-border: #B0C4DE;
 
 --color-fg-default: #FFFFFF;             /* fixed invalid #ffff */
---color-fg-muted: #00E6E6;               /* was #00FFFF */
+--color-fg-muted: #171717;               /* was #00FFFF */
 --color-fg-subtle: #FFF04D;              /* was #FFFF00 */
 
---color-canvas-default: #171717;
+--color-canvas-default: #7550A1;
 --color-canvas-overlay: #8FEE8F;          /* was #90EE90 */
---color-canvas-inset: #0000CC;            /* was #0000FF */
+--color-canvas-inset: #171717;            /* was #0000FF */
 --color-canvas-subtle: #ECD444;            /* was #FF00FF */
 
---color-border-default: #FFE600;          /* was #FFFF00 */
+--color-border-default: #ECD444;          /* was #FFFF00 */
 --color-border-muted: #FFAD33;            /* was #FFA500 */
 
 --color-neutral-muted: #FF2FA3;           /* was #FF1493 */
