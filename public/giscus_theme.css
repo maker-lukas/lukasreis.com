@@ -1,14 +1,14 @@
 main {
   /* Base */
-  --color-canvas-default: #745092;
-  --color-canvas-overlay: #6a477f;
-  --color-canvas-inset: #6a477f;
-  --color-canvas-subtle: #6f4a8e;
+  --color-canvas-default: #7550A1;
+  --color-canvas-overlay: #7550A1;
+  --color-canvas-inset: #8B5FBF;
+  --color-canvas-subtle: #8B5FBF;
 
   /* Text */
   --color-fg-default: #ffffff;
-  --color-fg-muted: #e3d7ee;
-  --color-fg-subtle: #cbb9dc;
+  --color-fg-muted: #e6d9f2;
+  --color-fg-subtle: #d2c2e8;
 
   /* Borders */
   --color-border-default: #e6d9f2;
@@ -53,20 +53,19 @@ main {
 
 /* Comment cards */
 .gsc-comment {
-  background-color: #6a477f;
+  background-color: #8B5FBF;
   border: 1px solid var(--color-border-default);
-  border-radius: 6px;
 }
 
 /* Textareas */
 .gsc-comment-box-textarea {
-  background-color: #6a477f;
+  background-color: #8B5FBF;
   color: #ffffff;
   border: 1px solid var(--color-border-default);
 }
 
 .gsc-comment-box-textarea::placeholder {
-  color: #d8c9e8;
+  color: #e6d9f2;
 }
 
 /* Header + footer */
