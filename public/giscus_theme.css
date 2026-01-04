@@ -10,7 +10,7 @@ main {
     --color-prettylights-syntax-storage-modifier-import: #00FF00;
     --color-prettylights-syntax-entity-tag: #00FFFF;
     --color-prettylights-syntax-keyword: #0000FF;
-    --color-prettylights-syntax-string: #FF00FF;
+    --color-prettylights-syntax-string: #ECD444;
     --color-prettylights-syntax-variable: #8B00FF;
     --color-prettylights-syntax-brackethighlighter-unmatched: #FF1493;
     --color-prettylights-syntax-invalid-illegal-text: #00FA9A;
@@ -60,7 +60,7 @@ main {
     --color-segmented-control-bg: #4169E1;
     --color-segmented-control-button-bg: #32CD32;
     --color-segmented-control-button-selected-border: #FFA500;
-    --color-fg-default: #FF00FF;
+    --color-fg-default: #ffff;
     --color-fg-muted: #00FFFF;
     --color-fg-subtle: #FFFF00;
     --color-canvas-default: #171717;
