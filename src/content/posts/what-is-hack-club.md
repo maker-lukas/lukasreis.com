@@ -1,7 +1,7 @@
 ---
 title: What is Hack Club?
-description: Draft Post
-pubDate: Dec 27 2025
+description: Talking About What Hack Club Is To Me
+pubDate: Jan 5 2026
 ---
 
 **Hack Club** is a global network of teen hackers and makers who build, code, and collaborate.
