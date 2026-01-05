@@ -1,6 +1,6 @@
 ---
 import Header from "../components/Header.astro";
-const { title } = Astro.props;
+const { title, description = "Lukas Reis - 16 year old developer, maker, and Hack Club member. Building cool projects with code, hardware, and PCBs. Explore my blog and projects." } = Astro.props;
 
 import "../styles/global.css"
 import Footer from "../components/Footer.astro";
@@ -13,7 +13,7 @@ import Footer from "../components/Footer.astro";
 		<link rel="icon" type="image/svg+xml" href="/src/images/icon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content="Lukas Reis - Developer, maker, and Hack Club member building cool projects" />
+		<meta name="description" content={description} />
 		<meta name="keywords" content="Lukas Reis, OrangoPontoTango, capitaoananas, developer, maker" />
 		<meta name="author" content="Lukas Reis" />
 		
