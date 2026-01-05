@@ -10,12 +10,34 @@ import Footer from "../components/Footer.astro";
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="src/images/icon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/src/images/icon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content="My Personal Website" />
-		<meta name="keywords" content="Lukas Reis, OrangoPontoTango, capitaoananas" />
+		<meta name="description" content="Lukas Reis - Developer, maker, and Hack Club member building cool projects" />
+		<meta name="keywords" content="Lukas Reis, OrangoPontoTango, capitaoananas, developer, maker" />
 		<meta name="author" content="Lukas Reis" />
+		
+		<!-- Open Graph -->
+		<meta property="og:title" content={title || "Lukas Reis"} />
+		<meta property="og:description" content="Lukas Reis - Developer, maker, and Hack Club member" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={Astro.url} />
+		
+		<!-- JSON-LD Schema for Person -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Person",
+			"name": "Lukas Reis",
+			"url": "https://lukasreis.com",
+			"sameAs": [
+				"https://github.com/capitaoananas"
+			],
+			"jobTitle": "Developer & Maker",
+			"description": "Developer, maker, and Hack Club member building cool projects"
+		}
+		</script>
+		
 		<title>{title}</title>
 	</head>
 	<body>
