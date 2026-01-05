@@ -1,20 +1,16 @@
 main {
-  /* Base */
   --color-canvas-default: #7550A1;
   --color-canvas-overlay: #7550A1;
   --color-canvas-inset: #8B5FBF;
   --color-canvas-subtle: #8B5FBF;
 
-  /* Text */
   --color-fg-default: #ffffff;
   --color-fg-muted: #e6d9f2;
   --color-fg-subtle: #d2c2e8;
 
-  /* Borders */
   --color-border-default: #ffffff;
   --color-border-muted: #ffffff;
 
-  /* Buttons */
   --color-btn-bg: transparent;
   --color-btn-text: #ffffff;
   --color-btn-border: #e6d9f2;
@@ -22,7 +18,6 @@ main {
   --color-btn-hover-border: #ffffff;
   --color-btn-active-bg: rgba(255, 255, 255, 0.12);
 
-  /* Primary buttons (Reply / Comment) */
   --color-btn-primary-bg: transparent;
   --color-btn-primary-text: #ffffff;
   --color-btn-primary-border: #ffffff;
@@ -30,34 +25,28 @@ main {
   --color-btn-primary-hover-border: #ffffff;
   --color-btn-primary-selected-bg: rgba(255, 255, 255, 0.16);
 
-  /* Inputs */
   --color-neutral-muted: rgba(255, 255, 255, 0.15);
 
-  /* Accent (icons, links, reactions) */
   --color-accent-fg: #ffffff;
   --color-accent-emphasis: #ffffff;
   --color-accent-muted: rgba(255, 255, 255, 0.35);
   --color-accent-subtle: rgba(255, 255, 255, 0.15);
 
-  /* Reactions */
   --color-social-reaction-bg-hover: rgba(255, 255, 255, 0.15);
   --color-social-reaction-bg-reacted-hover: rgba(255, 255, 255, 0.25);
 }
 
-/* Containers */
 .gsc-comments,
 .gsc-comment-box,
 .gsc-timeline {
   background: transparent;
 }
 
-/* Comment cards */
 .gsc-comment {
   background-color: #8B5FBF;
   border: 1px solid var(--color-border-default);
 }
 
-/* Textareas */
 .gsc-comment-box-textarea {
   background-color: #8B5FBF;
   color: #ffffff;
@@ -68,7 +57,6 @@ main {
   color: #ffffff;
 }
 
-/* Header + footer */
 .gsc-header,
 .gsc-comment-footer {
   border-color: var(--color-border-default);

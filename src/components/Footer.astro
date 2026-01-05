@@ -1,17 +1,50 @@
 ---
+import { execSync } from "node:child_process";
 
+const commit = execSync("git rev-parse --short HEAD").toString().trim();
+const date = execSync("git log -1 --format=%cd --date=iso").toString().trim();
+
+function timeAgo(input: string) {
+  const seconds = Math.floor(
+    (Date.now() - new Date(input).getTime()) / 1000
+  );
+
+  const intervals = [
+    { label: "year", seconds: 31536000 },
+    { label: "month", seconds: 2592000 },
+    { label: "day", seconds: 86400 },
+    { label: "hour", seconds: 3600 },
+    { label: "minute", seconds: 60 },
+  ];
+
+  for (const i of intervals) {
+    const count = Math.floor(seconds / i.seconds);
+    if (count >= 1) {
+      return `${count} ${i.label}${count > 1 ? "s" : ""} ago`;
+    }
+  }
+
+  return "just now";
+}
+
+const relativeTime = timeAgo(date);
 ---
-
 <footer>
   <p>
-  Made with <span>&lt;3</span> by Lukas using
-  <a href="https://astro.build">Astro</a>
+    Made with <span>&lt;3</span> by Lukas using
+    <a href="https://astro.build">Astro</a>
   </p>
+
   <div>
     <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPL-3.0</a>
     <p>
       Source at
       <a href="https://github.com/maker-lukas/lukasreis.com">GitHub</a>
+    </p>
+    <p>
+      Last Commit:
+      <a href={`https://github.com/maker-lukas/lukasreis.com/commit/${commit}`}> {commit} </a> 
+      {relativeTime}
     </p>
   </div>
 </footer>
@@ -28,7 +61,8 @@
     text-decoration: underline;
   }
 
-  a:active,a:hover {
+  a:active,
+  a:hover {
     text-decoration: none;
   }
 
@@ -48,5 +82,10 @@
     font-weight: bold;
     font-size: 16px;
     color: #171717;
+  }
+
+  footer p:last-child {
+    font-size: 14px;
+    opacity: 0.9;
   }
 </style>

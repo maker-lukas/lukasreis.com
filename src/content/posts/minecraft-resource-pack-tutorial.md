@@ -1,6 +1,6 @@
 ---
 title: Minecraft Enchanted Textures Tutorial
-description: Learn how to make enchantment specific item textures
+description: Learn how to make enchantment specific textures
 pubDate: Jan 02 2026
 ---
 This is what you'll get after this tutorial
@@ -11,11 +11,12 @@ This is what you'll get after this tutorial
 ## Before You Start
 
 - **Resources**
-    - My Resource Pack <a href="https://github.com/maker-lukas/B.E.T.T" class="download-link">github.com/maker-lukas/B.E.T.T</a>
-    - <a href="https://minecraft.wiki/w/Tutorial:Creating_a_resource_pack" class="download-link">minecraft.wiki/Tutorial:Creating_a_resource_pack</a>
+    - My Resource Pack <a href="https://github.com/maker-lukas/B.E.T.T" class="link">github.com/maker-lukas/B.E.T.T</a>
+    - <a href="https://minecraft.wiki/w/Tutorial:Creating_a_resource_pack" class="link">minecraft.wiki/Tutorial:Creating_a_resource_pack</a>
 - **What you'll Need**
     - Text Editor (VS Code, NotePad++, etc)
     - Minecraft version **1.21.5+** (older versions do not support data driven item models)
+    - Basic understanding of json
 
 ---
 ## Getting Started
@@ -85,7 +86,7 @@ Next, add the texture that represents the enchantment effect.
 In this example, the Fire Aspect texture is animated, so it uses a sprite sheet.
 
 You can download my sprite sheet here:
-<a href="../../../public/images/fire_aspect.png" download class="download-link">fire_aspect.png</a>
+<a href="../../../public/images/fire_aspect.png" download class="link">fire_aspect.png</a>
 
 
 Place the file here:

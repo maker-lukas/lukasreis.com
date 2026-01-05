@@ -32,12 +32,12 @@ I didn't believe it at first and asked for proof. And he gave me. We stayed up t
 
 If you want to see one of my biggest projects I build through Hack Club, check out this post:
 
-- [40%ish Split Keyboard](./40%ish-bts)
+- <a href="./40ish-bts" class="link">40%ish Split Keyboard</a>
 
 And if you are interested on reading more about Hack Club check these:
 
-- [Hack Club](https://hackclub.com)
-- [The Hack Club Philosophy](https://hackclub.com/philosophy/)
+- <a href="https://hackclub.com/" class="link">Hack Club</a>
+- <a href="https://hackclub.com/philosophy/" class="link">The Hack Club Philosophy</a>
 
 If you’re between the ages of 13 and 18, or a parent with a child in that age range, you should consider joining Hack Club.
 
