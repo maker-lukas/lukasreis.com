@@ -40,3 +40,5 @@ And if you are interested on reading more about Hack Club check these:
 - [The Hack Club Philosophy](https://hackclub.com/philosophy/)
 
 If you’re between the ages of 13 and 18, or a parent with a child in that age range, you should consider joining Hack Club.
+
+---
