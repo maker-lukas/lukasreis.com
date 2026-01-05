@@ -14,7 +14,7 @@ pubDate: Dec 27 2025
 
 It sounds big, but it's true. Before Hack Club, I mostly spent my time watching videos and playing games. After joining I started making real projects that I'm actually proud of. I learned how to code, make PCBs, solder, and actually ship good projects.
 
-Here are a few moments  
+Here are a few moments from Hack Club
 
 ### Attending a 24-hour hackathon
 
