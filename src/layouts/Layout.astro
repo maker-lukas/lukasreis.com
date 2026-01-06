@@ -1,9 +1,10 @@
 ---
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import FooterNav from "../components/FooterNav.astro";
 const { title, description = "Lukas Reis - 16 year old developer, maker, and Hack Club member. Building cool projects with code, hardware, and PCBs. Explore my blog and projects." } = Astro.props;
 
 import "../styles/global.css"
-import Footer from "../components/Footer.astro";
 
 ---
 
@@ -41,10 +42,41 @@ import Footer from "../components/Footer.astro";
 		<title>{title}</title>
 	</head>
 	<body>
-		<Header />
+		<div class="desktop">
+			<Header />
+		</div>
 		<main>
 			<slot />
 		</main>
-		<Footer />
+		<div class="desktop">
+			<Footer />
+		</div>
+		<div class="mobile">
+			<FooterNav />
+		</div>
 	</body>
+
+<style is:global>
+	.desktop {
+		display: block;
+	}
+	
+	.mobile {
+		display: none;
+	}
+
+	@media (max-width: 700px) {
+		.desktop {
+			display: none;
+		}
+		
+		.mobile {
+			display: block;
+		}
+		
+		body {
+			padding-bottom: 200px;
+		}
+	}
+</style>
 </html>
