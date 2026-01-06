@@ -30,4 +30,11 @@ import Firefly from "./projects/Firefly.astro";
         font-weight: bold;
         text-align: center;
     }
+
+    @media (max-width: 700px) {
+        div:not(:first-child),
+        h1 {
+            visibility: hidden;
+        }
+    }
 </style>
