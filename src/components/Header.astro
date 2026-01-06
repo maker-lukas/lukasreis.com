@@ -3,8 +3,8 @@
 ---
 
 <header>
-    <a href="/">Lukas Reis</a> 
-    <nav class="myNav">
+    <a class="home" href="/">Lukas Reis</a> 
+    <nav class="nav">
         <a href="/">Home</a>
         <span> / </span>
         <a href="/blog">Blog</a>
@@ -40,5 +40,46 @@
         padding-inline: 15px;
         
         margin-inline: max(calc((100% - 810px) / 2), 15px);
-}
+    }
+
+    @media (max-width:700px) {
+        header {
+            top: auto;
+            bottom: 0;
+            border-radius: 20px 20px 0px 0px;
+            justify-content: center;
+        }
+
+        .home {
+            display: none;
+        }
+
+    }
+
 </style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        if (window.innerWidth > 700) return;
+        
+        const header = document.querySelector('header') as HTMLElement;
+        const footer = document.querySelector('footer') as HTMLElement;
+        
+        if (!header || !footer) return;
+        
+        function updateHeaderPosition() {
+            const footerRect = footer!.getBoundingClientRect();
+            
+            if (footerRect.top < window.innerHeight) {
+                const moveUp = Math.max(0, window.innerHeight - footerRect.top - 1);
+                header!.style.bottom = moveUp + 'px';
+            } else {
+                header!.style.bottom = '0px';
+            }
+        }
+        
+        window.addEventListener('scroll', updateHeaderPosition);
+        window.addEventListener('resize', updateHeaderPosition);
+        updateHeaderPosition();
+    });
+</script>

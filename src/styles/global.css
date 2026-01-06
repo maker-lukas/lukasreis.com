@@ -37,3 +37,9 @@ body {
 	margin-top: auto;
 	margin-bottom: auto;
 }
+
+@media (max-width:700px) {
+	body {
+		background-color: white;
+	}
+}

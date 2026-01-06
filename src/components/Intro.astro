@@ -11,7 +11,7 @@
         <p class="text">A home schooled tech nerd, hardware enthusiast, programming noob.</p>
         
     </div>
-    <a href="https://hackclub.com/"><img style="width: 170px;" src="https://assets.hackclub.com/flag-orpheus-left.svg" alt="Hack Club"/></a>
+    <a class="banner" href="https://hackclub.com/"><img style="width: 170px;" src="https://assets.hackclub.com/flag-orpheus-left.svg" alt="Hack Club"/></a>
 </div>
 <div class="inner inner-2">
     <img class="image"
@@ -102,6 +102,12 @@
 
     .intro {
         padding-left: 15px;
+    }
+
+    @media (max-width: 700px) {
+        .banner {
+            display: none;
+        }
     }
 
 </style>
