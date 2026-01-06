@@ -57,29 +57,3 @@
     }
 
 </style>
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        if (window.innerWidth > 700) return;
-        
-        const header = document.querySelector('header') as HTMLElement;
-        const footer = document.querySelector('footer') as HTMLElement;
-        
-        if (!header || !footer) return;
-        
-        function updateHeaderPosition() {
-            const footerRect = footer!.getBoundingClientRect();
-            
-            if (footerRect.top < window.innerHeight) {
-                const moveUp = Math.max(0, window.innerHeight - footerRect.top - 1);
-                header!.style.bottom = moveUp + 'px';
-            } else {
-                header!.style.bottom = '0px';
-            }
-        }
-        
-        window.addEventListener('scroll', updateHeaderPosition);
-        window.addEventListener('resize', updateHeaderPosition);
-        updateHeaderPosition();
-    });
-</script>
