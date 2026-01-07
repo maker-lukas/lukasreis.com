@@ -61,4 +61,11 @@ const posts = (await getCollection('blog'))
     .read-post {
         text-align: end;
     }
+
+    @media (max-width: 700px) {
+        .post-card {
+            display: none;
+        }
+    }
+
 </style>

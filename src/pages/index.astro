@@ -46,6 +46,14 @@ import Link from "../components/Link.astro";
         height: 450px;
     }
 
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 43px auto;
+        grid-gap: 15px;
+        height: 450px;
+    }
+
     .blogs-grid {
 		display: grid;
 		grid-template-columns: 1fr;
@@ -54,14 +62,6 @@ import Link from "../components/Link.astro";
         text-align: center;
         height: 508px;
 	}
-
-    .projects-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 43px auto;
-        grid-gap: 15px;
-        height: 450px;
-    }
     
     .card {
         width: 100%;
@@ -69,10 +69,6 @@ import Link from "../components/Link.astro";
         border-radius: 20px;
         padding: 15px;
         align-self: center;
-    }
-
-    .card1 {
-        padding-left: 0px;
     }
 
     h1 {
@@ -92,13 +88,17 @@ import Link from "../components/Link.astro";
 
         .card {
             width: 100%;
-            max-width: 100%;
             padding: 15px;
         }
 
-        .page-grid {
-            width: 100%;
-            padding: 0;
+        .intro-grid {
+            grid-gap: 0px;
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        .blogs-grid {
+            height: 450px;
         }
     }
 </style>
