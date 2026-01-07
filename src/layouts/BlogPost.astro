@@ -1,60 +1,42 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-
 import FormattedDate from '../components/FarmattedDate.astro';
-
-import '../styles/global.css';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import Layout from './Layout.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 const { title, description, pubDate } = Astro.props;
 const id = Astro.url.pathname.split('/').pop();
-
-
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width" />
-	<link rel="icon" type="image/svg+xml" href="../images/icon.svg" />
-	<title>lukas/blog/{id}</title>
-</head>
-<body>
-    <Header />
-    <main>
-        <div class="page-grid">
-            <div class="card">
-                <div class="frontmatter">
-                    <h1>{title}</h1>
-                    <p>{description}</p>
-                    <p>
-                        <FormattedDate date={pubDate} />
-                    </p>
-                </div>
-                <slot />
-                <script src="https://giscus.app/client.js"
-                        data-repo="maker-lukas/lukasreis.com"
-                        data-repo-id="R_kgDOQrrsrQ"
-                        data-category="General"
-                        data-category-id="DIC_kwDOQrrsrc4C0hYf"
-                        data-mapping="pathname"
-                        data-strict="0"
-                        data-reactions-enabled="1"
-                        data-emit-metadata="0"
-                        data-input-position="top"
-                        data-theme="https://lukasreis.com/giscus_theme.css"
-                        data-lang="en"
-                        crossorigin="anonymous"
-                        async>
-                </script>
+
+<Layout title={`lukas/blog/${id}`}>
+    <div class="page-grid">
+        <div class="card">
+            <div class="frontmatter">
+                <h1>{title}</h1>
+                <p>{description}</p>
+                <p>
+                    <FormattedDate date={pubDate} />
+                </p>
             </div>
+            <slot />
+            <script src="https://giscus.app/client.js"
+                    data-repo="maker-lukas/lukasreis.com"
+                    data-repo-id="R_kgDOQrrsrQ"
+                    data-category="General"
+                    data-category-id="DIC_kwDOQrrsrc4C0hYf"
+                    data-mapping="pathname"
+                    data-strict="0"
+                    data-reactions-enabled="1"
+                    data-emit-metadata="0"
+                    data-input-position="top"
+                    data-theme="https://lukasreis.com/giscus_theme.css"
+                    data-lang="en"
+                    crossorigin="anonymous"
+                    async>
+            </script>
         </div>
-    </main>
-    <Footer />
-</body>
-</html>
+    </div>
+</Layout>
 
 <style>
     .frontmatter {
@@ -93,7 +75,8 @@ const id = Astro.url.pathname.split('/').pop();
         overflow-x: auto;
         margin-top: 15px;
         margin-bottom: 15px;
-        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     :global(code) {
@@ -179,26 +162,9 @@ const id = Astro.url.pathname.split('/').pop();
     }
 
     @media (max-width: 700px) {
-        h1 {
-            font-size: 28px;
-        }
-
-        :global(p) {
-            font-size: 16px;
-        }
-
-        :global(h2) {
-            font-size: 22px;
-        }
-
-        :global(h3) {
-            font-size: 18px;
-        }
-
-        :global(h4),
-        :global(h5),
-        :global(h6) {
-            font-size: 16px;
+        .card {
+            width: calc(100vw - 30px);
+            padding: 15px;
         }
     }
 
