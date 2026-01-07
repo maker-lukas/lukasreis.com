@@ -24,7 +24,7 @@ import Layout from '../layouts/Layout.astro';
 	.blogs-grid {
 		display: grid;
 		grid-template-columns: 1fr;
-		grid-template-rows: 43px repeat(3, 130px);
+		grid-template-rows: 43px repeat(4, 130px);
 		grid-gap: 15px;
 	}
 
@@ -43,4 +43,13 @@ import Layout from '../layouts/Layout.astro';
         justify-content: center;
         align-items: center;
 	}
+
+	@media (max-width: 700px) {
+		.blogs-grid {
+			grid-template-rows: 43px repeat(4, 150px);
+		}
+
+		
+	}
+
 </style>

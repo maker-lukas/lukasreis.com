@@ -16,7 +16,7 @@ const posts = (await getCollection('blog'))
         <span></span>
         <div class="data">
             <div>
-                <h1>{post.data.title}</h1>
+                <h1 class="title">{post.data.title}</h1>
                 <p class="description">{post.data.description}</p>
             </div>
             <p class="meta">
@@ -63,8 +63,16 @@ const posts = (await getCollection('blog'))
     }
 
     @media (max-width: 700px) {
-        .post-card {
-            display: none;
+        .title {
+            font-size: 18px;
+        }
+
+        .meta {
+            font-size: 15px;
+        }
+
+        .description {
+            font-size: 15px;
         }
     }
 
