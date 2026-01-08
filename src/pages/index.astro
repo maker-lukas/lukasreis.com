@@ -91,14 +91,19 @@ import Link from "../components/Link.astro";
             padding: 15px;
         }
 
-        .intro-grid {
-            grid-gap: 0px;
-            display: grid;
-            grid-template-columns: 1fr;
-        }
 
         .blogs-grid {
             height: 450px;
         }
+
+        .intro-grid {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+            grid-template-areas:
+                "one"
+                "two";
+            height: auto;
+        }
+
     }
 </style>
