@@ -77,7 +77,7 @@ import Link from "../components/Link.astro";
 
     .link {
         display: grid;
-        grid-template-columns: 1fr auto 1fr;
+        grid-template-columns: auto auto auto;
         
     }
 
@@ -102,7 +102,12 @@ import Link from "../components/Link.astro";
             grid-template-areas:
                 "one"
                 "two";
-            height: auto;
+            height: 450px;
+        }
+
+        .projects-grid {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 35px auto auto;
         }
 
     }

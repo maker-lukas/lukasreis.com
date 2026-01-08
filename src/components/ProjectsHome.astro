@@ -32,9 +32,18 @@ import Firefly from "./projects/Firefly.astro";
     }
 
     @media (max-width: 700px) {
-        div:not(:first-child),
+
         h1 {
+            font-size: 25px;
+        }
+
+        .project:nth-child(6) {
             display: none;
         }
+
+        .project {
+            grid-column: span 3;
+        }
+
     }
 </style>

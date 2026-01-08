@@ -1,12 +1,15 @@
 ---
 
+const { showImage } = Astro.props
+
 ---
 
 <div class="container">
     <div>
         <img
         src="../images/keyboard.jpg"
-        alt="40%ish split keyboard"/>
+        alt="40%ish split keyboard"
+        style={`display: ${showImage ? 'block' : 'none'}`}/>
         <h1>40%ish Split Keyboard</h1>
         <p>A fully custom 36 key wired split keyboard</p>
     </div>
@@ -17,7 +20,7 @@
 <style>
     img {
         width: 100%;
-        display: block;
+        display: {imageShow};
         margin-inline: auto;
         border-radius: 10px;
     }
@@ -45,5 +48,11 @@
     a {
         color: white;
         font-weight: bold;
+    }
+
+    @media (max-width: 700px) {
+        img {
+            display: {imageShow};
+        }
     }
 </style>
