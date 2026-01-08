@@ -2,18 +2,18 @@
 import { getCollection } from 'astro:content';
 import FormattedDate from '../components/FarmattedDate.astro';
 
-const posts = (await getCollection('blog'))
+const allPosts = (await getCollection('blog'))
     .filter(post => !post.data.draft)
     .sort(
         (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-    )
-    .slice(0, 3);
+    );
+const posts = allPosts.slice(0, 3);
 ---
 
 {posts.length === 0 && <p class="empty">No posts yet :(</p>}
 
-{posts.map((post) => (
-    <div class="post-card">
+{posts.map((post, index) => (
+    <div class="post-card" data-index={index}>
         <span></span>
         <div class="data">
             <div>
@@ -61,7 +61,7 @@ const posts = (await getCollection('blog'))
     }
 
     @media (max-width: 700px) {
-        .post-card {
+        .post-card[data-index="2"] {
             display: none;
         }
     }
