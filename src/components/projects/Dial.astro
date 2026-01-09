@@ -1,16 +1,16 @@
 ---
 
-const { showImage } = Astro.props
+const { showImage, isHomepage } = Astro.props
 
 ---
 
 <div class="container">
     <div>
-        <img
-        src="../images/dial.png"
-        alt="Dial"
-        style={`display: ${showImage ? 'block' : 'none'}`}
-        />
+         <img
+         src="../images/dial.png"
+         alt="Dial"
+         class={isHomepage ? 'homepage' : ''}
+         />
         <h1>Dial</h1>
         <p>A wireless smooth scrolling dial that uses a AS5600 sensor</p>
     </div>
@@ -20,11 +20,11 @@ const { showImage } = Astro.props
 
 <style>
     img {
-        width: 100%;
-        display: {showImage};
-        margin-inline: auto;
-        border-radius: 10px;
-    }
+         width: 100%;
+         display: block;
+         margin-inline: auto;
+         border-radius: 10px;
+     }
 
     h1 {
         font-size: 15px;
@@ -52,8 +52,8 @@ const { showImage } = Astro.props
     }
 
     @media (max-width: 700px) {
-        img {
-            display: {showImage};
-        }
-    }
+         img.homepage {
+             display: none;
+         }
+     }
 </style>
