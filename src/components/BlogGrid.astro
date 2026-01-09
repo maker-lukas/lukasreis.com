@@ -24,7 +24,7 @@ const posts = (await getCollection('blog'))
             </p>
         </div>
         <div class="read-post">
-            <a href={`/blog/${post.id}`}>Read Post →</a>
+            <a href={`/blog/${post.id}`}><span class="desktop">Read Post →</span><span class="mobile">Read →</span></a>
         </div>
     </div>
 ))}
@@ -52,6 +52,11 @@ const posts = (await getCollection('blog'))
         font-size: 18px;
         font-weight: bold;
         color: white;
+        display: inline;
+    }
+
+    .mobile {
+        display: none;
     }
 
     h1 {
@@ -60,6 +65,8 @@ const posts = (await getCollection('blog'))
 
     .read-post {
         text-align: end;
+        width: fit-content;
+        justify-self: end;
     }
 
     @media (max-width: 700px) {

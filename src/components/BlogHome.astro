@@ -25,7 +25,7 @@ const posts = allPosts.slice(0, 3);
             </p>
         </div>
         <div class="read-post">
-            <a href={`/blog/${post.id}`}>Read Post →</a>
+            <a href={`/blog/${post.id}`}><span class="desktop">Read Post →</span><span class="mobile">Read →</span></a>
         </div>
     </div>
 ))}
@@ -50,6 +50,11 @@ const posts = allPosts.slice(0, 3);
         font-size: 18px;
         font-weight: bold;
         color: white;
+        display: inline;
+    }
+
+    .mobile {
+        display: none;
     }
 
     h1 {
@@ -58,11 +63,21 @@ const posts = allPosts.slice(0, 3);
 
     .read-post {
         text-align: end;
+        width: fit-content;
+        justify-self: end;
     }
 
     @media (max-width: 700px) {
         .post-card[data-index="2"] {
             display: none;
+        }
+
+        .desktop {
+            display: none;
+        }
+
+        .mobile {
+            display: inline;
         }
     }
 </style>
