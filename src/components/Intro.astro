@@ -32,8 +32,8 @@
     src="../images/lukas.jpg"
     alt="picture of lukas"/>
     <div class="now-playing">
-        <p>Now Playing</p>
-        <p>Still need to setup a backend for this</p>
+        <p class="in4">Now Playing</p>
+        <p class="in4">Still need to setup a backend for this</p>
     </div>
 </div>
 
@@ -170,17 +170,20 @@
             padding: 15px;
             max-height: 150px;
             height: auto;
+            grid-area: four;
         }
 
         .image-4 {
             width: auto;
             height: 100%;
             border-radius: 10px;
-            flex-shrink: 1;
             max-width: 150px;
-            align-self: flex-start;
-            margin: 0;
         }
+
+        .in4 {
+            font-size: 14px;
+        }
+
 
     }
 

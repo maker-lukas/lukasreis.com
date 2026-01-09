@@ -22,6 +22,7 @@ const posts = allPosts.slice(0, 3);
             </div>
             <p class="meta">
                 Published on <FormattedDate date={post.data.pubDate} />
+                <a href={`/blog/${post.id}`} class="mobile-read"><span class="desktop">Read Post →</span><span class="mobile">Read →</span></a>
             </p>
         </div>
         <div class="read-post">
@@ -57,6 +58,11 @@ const posts = allPosts.slice(0, 3);
         display: none;
     }
 
+    .mobile-read {
+        display: none;
+        margin-top: 8px;
+    }
+
     h1 {
         font-size: 20px;
     }
@@ -78,6 +84,22 @@ const posts = allPosts.slice(0, 3);
 
         .mobile {
             display: inline;
+        }
+
+        .mobile-read {
+            display: block;
+        }
+
+        h1 {
+            font-size: 17px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        .read-post {
+            display: none;
         }
     }
 </style>
