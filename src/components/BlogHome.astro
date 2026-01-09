@@ -51,7 +51,14 @@ const posts = allPosts.slice(0, 3);
         font-size: 18px;
         font-weight: bold;
         color: white;
+        width: fit-content;
+    }
+
+    .desktop,
+    .mobile {
         display: inline;
+        line-height: 1;
+        vertical-align: baseline;
     }
 
     .mobile {
@@ -88,6 +95,8 @@ const posts = allPosts.slice(0, 3);
 
         .mobile-read {
             display: block;
+            width: fit-content;
+            margin: 8px auto 0 auto;
         }
 
         h1 {
