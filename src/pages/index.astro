@@ -1,16 +1,131 @@
 ---
+import Layout from "../layouts/Layout.astro";
 
+const birthDate = new Date(2009, 10, 25);
+const today = new Date();
+let age = today.getFullYear() - birthDate.getFullYear();
+if (today < new Date(today.getFullYear(), 10, 25)) {
+	age--;
+}
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="lukas/home">
+
+	<div class="page">
+
+		<div class="intro">
+			<h1>Hey, I'm Lukas!</h1>
+			<p>I'm a {age} year old<span id="typewriter"></span><span class="cursor">|</span>based in <a href="https://www.openstreetmap.org/search?query=peniche+portugal&zoom=16&minlon=-9.395992755889894&minlat=39.34483552156466&maxlon=-9.361853599548342&maxlat=39.36157703256755#map=15/39.35748/-9.37660">Portugal</a></p>
+		</div>
+
+		<div class="container">
+			<div class="titles">
+				<p class="text">Projects</p>
+				<a class="link" href="/projects">View all →</a>
+			</div>
+
+			<div class="projects">
+				<div class="project project-1">
+					test
+				</div>
+
+				<div class="project project-2">test 2</div>
+			</div>
+
+		</div>
+
+	</div>
+
+</Layout>
+
+
+<style>
+	
+	.page {
+		margin-top: 75px;
+	}
+
+	.intro {
+		margin-bottom: 75px;
+	}
+
+	.cursor {
+		animation: blink 1s step-end infinite;
+	}
+
+	@keyframes blink {
+		50% { opacity: 0; }
+	}
+
+	h1 {
+		margin-bottom: 0.5rem;
+	}
+
+	.titles {
+		display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+		margin-bottom: 1ch;
+		
+	}
+
+	.projects {
+		display: flex;
+		gap: 16px;
+	}
+
+	.project {
+		flex: 1;
+		background: #452F5E;
+		border-radius: 10px;
+		min-height: 350px;
+		padding: 1ch;
+
+		border: 3px solid #7550A1;
+	}
+
+	.text {
+		font-size: 20px;
+	}
+
+	.link {
+		font-size: 16px;
+	}
+
+</style>
+
+<script>
+	const words = [" nerd", " homeschooler", " hardware enthusiast", " Hack Clubber"];
+	const typewriter = document.getElementById("typewriter")!;
+	let wordIndex = 0;
+	let charIndex = 0;
+	let isDeleting = false;
+
+	function type() {
+		const currentWord = words[wordIndex];
+		
+		if (isDeleting) {
+			typewriter.textContent = currentWord.substring(0, charIndex - 1);
+			charIndex--;
+		} else {
+			typewriter.textContent = currentWord.substring(0, charIndex + 1);
+			charIndex++;
+		}
+
+		let delay = isDeleting ? 50 : 100;
+
+		if (!isDeleting && charIndex === currentWord.length) {
+			delay = 2000;
+			isDeleting = true;
+		} else if (isDeleting && charIndex === 0) {
+			isDeleting = false;
+			wordIndex = (wordIndex + 1) % words.length;
+			delay = 500;
+		}
+
+		setTimeout(type, delay);
+	}
+
+	type();
+</script>
