@@ -10,9 +10,9 @@
 }
 
 body {
-    background-color: #140D1B;
-    color: white;
-    font-family: "JetBrains Mono";
+  background-color: #140D1B;
+  color: white;
+  font-family: "JetBrains Mono";
 
 	padding-inline: max(calc((100% - 750px) / 2), 20px);
 }

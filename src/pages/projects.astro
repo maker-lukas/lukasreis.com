@@ -1,9 +1,32 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
-
+import ProjectCard from "../components/ProjectCard.astro";
+import { projects } from "../data/projects";
 ---
 
 <Layout title="lukas/projects">
-
+  <div class="page">
+    <h2>Projects</h1>
+    <div class="projects">
+      {projects.map((p) => (
+        <ProjectCard {...p} />
+      ))}
+    </div>
+  </div>
 </Layout>
+
+<style>
+  .page {
+    padding-block: 50px;
+  }
+
+  h2 {
+    margin-bottom: 1ch;
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+  }
+</style>
