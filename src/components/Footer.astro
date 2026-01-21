@@ -1,10 +1,16 @@
 ---
+let commitHash = 'unknown';
+try {
+    const res = await fetch('https://api.github.com/repos/maker-lukas/lukasreis.com-v2.1/commits?per_page=1');
+    const data = await res.json();
+    if (data[0]?.sha) commitHash = data[0].sha.slice(0, 7);
+} catch {}
 ---
 
 <footer>
-    <a id="commit-link" href="https://github.com/maker-lukas/lukasreis.com-v2.1">
+    <a href={`https://github.com/maker-lukas/lukasreis.com-v2.1/commit/${commitHash}`}>
         <img src="/git-commit.svg" alt="commit" />
-        <span id="commit-hash">loading...</span>
+        {commitHash}
     </a>
     <p>Made by Lukas with &lt;3</p>
     <a href="https://github.com/maker-lukas">GitHub</a>
@@ -31,22 +37,3 @@
         vertical-align: middle;
     }
 </style>
-
-<script>
-    async function fetchCommit() {
-        try {
-            const res = await fetch('https://api.github.com/repos/maker-lukas/lukasreis.com-v2.1/commits?per_page=1');
-            const data = await res.json();
-            if (data[0]?.sha) {
-                const hash = data[0].sha.slice(0, 7);
-                document.getElementById('commit-hash')!.textContent = hash;
-                document.getElementById('commit-link')!.setAttribute('href', 
-                    `https://github.com/maker-lukas/lukasreis.com-v2.1/commit/${hash}`);
-            }
-        } catch (e) {
-            document.getElementById('commit-hash')!.textContent = 'unknown';
-        }
-    }
-    fetchCommit();
-    setInterval(fetchCommit, 5000);
-</script>

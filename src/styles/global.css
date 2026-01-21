@@ -3,10 +3,6 @@
   src: url(/public/fonts/JetBrainsMono[wght].ttf);
 }
 
-main {
-    min-height: 100vh;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
