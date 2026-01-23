@@ -20,12 +20,25 @@ const commitHash = execSync('git rev-parse --short HEAD').toString().trim();
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
     }
 
     footer a:first-child {
         display: inline-flex;
         align-items: center;
         gap: 0.25rem;
+        flex: 1;
+    }
+
+    footer p {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    footer a:last-child {
+        flex: 1;
+        text-align: right;
     }
 
     footer a:first-child img {
