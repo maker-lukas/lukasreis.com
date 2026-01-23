@@ -21,9 +21,8 @@ const formattedDate = post.data.date.toLocaleDateString('en-US', {
 ---
 
 <Layout title={`lukas/${post.slug}`}>
-  <article class="page">
-    <div class="container">
-      <header>
+    <div class="page">
+      <div class="heading">
         <h2>{post.data.title}</h2>
         <time datetime={post.data.date.toISOString()}>{formattedDate}</time>
         {post.data.tags && post.data.tags.length > 0 && (
@@ -33,18 +32,25 @@ const formattedDate = post.data.date.toLocaleDateString('en-US', {
             ))}
           </div>
         )}
-      </header>
+      </div>
+      <hr>
       <div class="content">
         <Content />
       </div>
       
     </div>
-  </article>
 </Layout>
 
 <style>
+
   .page {
     padding-block: 50px;
+  }
+
+  hr {
+    border: none;
+    border-top: 3px solid #7550A1;
+    margin: 2em 0;
   }
 
   .back-link {
@@ -55,12 +61,6 @@ const formattedDate = post.data.date.toLocaleDateString('en-US', {
 
   .back-link:hover {
     opacity: 1;
-  }
-
-  header {
-    margin-bottom: 2ch;
-    padding-bottom: 2ch;
-    border-bottom: 3px solid #7550A1;
   }
 
   h2 {
@@ -193,11 +193,11 @@ const formattedDate = post.data.date.toLocaleDateString('en-US', {
   }
 
   .content :global(blockquote) {
+    background: #140D1B;
     border-left: 3px solid #7550A1;
     padding-left: 1.5ch;
     margin-left: 0;
     font-style: italic;
-    opacity: 0.9;
   }
 
   .content :global(img) {
@@ -216,33 +216,34 @@ const formattedDate = post.data.date.toLocaleDateString('en-US', {
 </style>
 
 <script>
-  document.querySelectorAll('pre').forEach((pre) => {
-    const code = pre.querySelector('code');
-    const lang = pre.getAttribute('data-language');
-    const copyLanguages = ['json', 'jsonc', 'js', 'ts', 'javascript', 'typescript', 'python', 'java', 'css', 'html', 'bash', 'sh'];
-    if (!lang || !copyLanguages.includes(lang)) return;
-    
-    const wrapper = document.createElement('div');
-    wrapper.className = 'code-wrapper';
-    pre.parentNode?.insertBefore(wrapper, pre);
-    wrapper.appendChild(pre);
-    
-    const btn = document.createElement('button');
-    btn.className = 'copy-btn';
-    btn.textContent = 'Copy';
-    btn.addEventListener('click', async () => {
-      let text = code?.textContent || pre.textContent || '';
-      if (lang === 'jsonc') {
-        text = text
-          .replace(/\/\/.*$/gm, '')
-          .replace(/\/\*[\s\S]*?\*\//g, '')
-          .replace(/^\s*\n/gm, '')
-          .trim();
-      }
-      await navigator.clipboard.writeText(text);
-      btn.textContent = 'copied';
-      setTimeout(() => btn.textContent = 'Copy', 2000);
-    });
-    wrapper.appendChild(btn);
+document.querySelectorAll('pre').forEach((pre) => {
+  const meta = pre.dataset.meta || '';
+  if (!meta.includes('copy')) return;
+
+  const code = pre.querySelector('code');
+  const lang = pre.getAttribute('data-language');
+  
+  const wrapper = document.createElement('div');
+  wrapper.className = 'code-wrapper';
+  pre.parentNode?.insertBefore(wrapper, pre);
+  wrapper.appendChild(pre);
+  
+  const btn = document.createElement('button');
+  btn.className = 'copy-btn';
+  btn.textContent = 'Copy';
+  btn.addEventListener('click', async () => {
+    let text = code?.textContent || pre.textContent || '';
+    if (lang === 'jsonc') {
+      text = text
+        .replace(/\/\/.*$/gm, '')
+        .replace(/\/\*[\s\S]*?\*\//g, '')
+        .replace(/^\s*\n/gm, '')
+        .trim();
+    }
+    await navigator.clipboard.writeText(text);
+    btn.textContent = 'copied';
+    setTimeout(() => btn.textContent = 'Copy', 2000);
   });
+  wrapper.appendChild(btn);
+});
 </script>

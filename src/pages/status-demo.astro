@@ -1,0 +1,232 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="lukas/status-demo">
+	<div class="demo-page">
+		
+
+		<div class="intro-section">
+			<h2>Hey, I'm Lukas!</h2>
+			<p class="age">I'm a 16 year old<span class="typewriter"> nerd</span><span class="cursor">|</span> based in <a href="#">Portugal</a></p>
+			<p>Also I am a fellow member of Hack Club.</p>
+			<p>When I'm not in my world I like reading, music, surfing</p>
+		</div>
+		
+		<p class="minimal-line"><span class="time-display">14:32</span> · <span class="now-playing">Loading...</span> · 3h 42m coded today</p>
+
+	</div>
+</Layout>
+
+<style>
+	.demo-page {
+		padding-block: 30px;
+	}
+
+	.controls {
+		background: #452F5E;
+		border: 3px solid #7550A1;
+		border-radius: 10px;
+		padding: 1rem;
+		margin-bottom: 30px;
+	}
+
+	.controls p {
+		margin-bottom: 0.5rem;
+		font-weight: bold;
+	}
+
+	.buttons {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+	}
+
+	.buttons button {
+		background: #140D1B;
+		color: white;
+		border: 2px solid #7550A1;
+		border-radius: 6px;
+		padding: 8px 12px;
+		font-family: inherit;
+		font-size: 14px;
+		cursor: pointer;
+		transition: all 0.2s ease;
+	}
+
+	.buttons button:hover {
+		border-color: #A084C2;
+	}
+
+	.time-toggle {
+		background: #FFDA0A;
+		color: #140D1B;
+		border-color: #FFDA0A;
+	}
+
+	.time-toggle:hover {
+		background: #e6c409;
+	}
+
+	/* Intro section */
+	.intro-section {
+		margin-bottom: 20px;
+	}
+
+	.intro-section h2 {
+		margin-bottom: 0.5rem;
+	}
+
+	.intro-section p {
+		margin-bottom: 0.2rem;
+	}
+
+	.age {
+		margin: 1em 0;
+	}
+
+	.cursor {
+		animation: blink 1s step-end infinite;
+	}
+
+	@keyframes blink {
+		50% { opacity: 0; }
+	}
+
+	/* Minimal line */
+	.minimal-line {
+		font-size: 14px;
+		color: #7550A1;
+		border-left: 2px solid #7550A1;
+		padding-left: 12px;
+		margin-top: 10px;
+	}
+
+	:global(.now-playing a) {
+		color: #7550A1 !important;
+	}
+
+	:global(.now-playing a:hover) {
+		color: #A084C2 !important;
+	}
+
+	/* Hackatime variants */
+	.stats-card {
+		margin-top: 10px;
+	}
+
+	.titles {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 1ch;
+	}
+
+	.text {
+		font-size: 20px;
+		font-weight: bold;
+	}
+
+	.today-stats {
+		background: #452F5E;
+		border: 3px solid #7550A1;
+		border-radius: 10px;
+		padding: 1rem;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 24px 30px;
+	}
+
+	.stat-item {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+	}
+
+	.stat-label {
+		color: #A084C2;
+		font-size: 12px;
+	}
+
+	.stat-value {
+		font-size: 16px;
+		font-weight: bold;
+	}
+
+	.content-placeholder {
+		background: #1a1225;
+		border: 2px dashed #7550A1;
+		border-radius: 10px;
+		padding: 2rem;
+		text-align: center;
+		color: #7550A1;
+		margin: 20px 0;
+	}
+
+	.yellow-line {
+		border: none;
+		border-top: 3px solid #FFDA0A;
+		margin: 20px 0;
+	}
+
+	.footer-with-hackatime {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 14px;
+		padding: 10px 0;
+	}
+
+	.footer-code-time {
+		color: #A084C2;
+	}
+
+	@media (max-width: 600px) {
+		.buttons {
+			flex-direction: column;
+		}
+	}
+</style>
+
+<script>
+	// Update time displays (24h format)
+	function updateTime() {
+		const now = new Date();
+		const timeStr = now.toLocaleTimeString('en-GB', { 
+			hour: '2-digit', 
+			minute: '2-digit',
+			timeZone: 'Europe/Lisbon'
+		});
+		
+		document.querySelectorAll('.time-display').forEach(el => {
+			el.textContent = timeStr;
+		});
+	}
+
+	updateTime();
+	setInterval(updateTime, 1000);
+
+	// Now playing from Last.fm
+	async function updateNowPlaying() {
+		try {
+			const res = await fetch('/api/now-playing', { cache: 'no-store' });
+			const data = await res.json();
+			const el = document.querySelector('.now-playing');
+			if (!el) return;
+
+			if (data.error) {
+				el.innerHTML = 'Not available';
+			} else if (data.nowPlaying) {
+				el.innerHTML = `<a href="${data.songUrl}" target="_blank">${data.song}</a> - <a href="${data.artistUrl}" target="_blank">${data.artist}</a>`;
+			} else {
+				el.innerHTML = 'Nothing playing';
+			}
+		} catch {
+			const el = document.querySelector('.now-playing');
+			if (el) el.innerHTML = 'Not available';
+		}
+	}
+
+	updateNowPlaying();
+	setInterval(updateNowPlaying, 5000);
+</script>

@@ -30,5 +30,6 @@ a:hover,a:active {
 }
 
 ::selection {
+  color: white;
   background-color: #7550A1;
 }

@@ -58,7 +58,7 @@ This will tell Minecraft exactly that
 
 `55` is the minimum format which coresponds to **1.21.5** and `2147483647` means all future versions will work
 
-``` json
+``` json copy
 {
   "pack": {
     "pack_format": 55,
@@ -105,7 +105,7 @@ If your texture is animated, create a file with the same name +
 fire_aspect.png.mcmeta
 ```
 
-``` json
+``` json copy
 {
   "animation": {
     "frametime": 2
@@ -131,7 +131,7 @@ assets/minecraft/models/item/sword/fire_aspect.json
 
 This model uses the default handheld sword model with a single texture layer for the enchantment effect.
 
-``` json
+``` json copy
 {
   "parent": "minecraft:item/handheld",
   "textures": {
@@ -156,7 +156,7 @@ assets/minecraft/items/diamond_sword.json
 <span class="warning">WARNING</span>
 JSON does not support comments. The comments below are for explanation only and must be removed in the final file.
 
-```jsonc
+```jsonc copy
 {
     "model": {
         // Composite type allows combining multiple models

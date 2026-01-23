@@ -17,4 +17,10 @@ export const projects = [
     image: "/images/dial.png",
     github: "https://github.com/maker-lukas/scroll-dial",
   },
+  {
+    title: "FireFly Tiny Whoop",
+    description: "A custom 75mm tiny whoop drone frame",
+    image: "/images/firefly.png",
+    github: "https://github.com/maker-lukas/"
+  }
 ];
