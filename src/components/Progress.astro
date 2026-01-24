@@ -1,0 +1,50 @@
+---
+interface Props {
+  goal: string;
+  percent?: number;
+}
+
+const { goal, percent } = Astro.props;
+const hasPercent = percent !== undefined;
+const filled = hasPercent ? Math.round(percent / 4) : 0;
+const empty = 25 - filled;
+const bar = '█'.repeat(filled) + '░'.repeat(empty);
+---
+
+<div class="progress-row">
+  <span class="goal">{goal}</span>
+  {hasPercent ? (
+    <>
+      <span class="bar">{bar}</span>
+      <span class="percent">{percent.toFixed(2)}%</span>
+    </>
+  ) : (
+    <span class="no-progress"></span>
+  )}
+</div>
+
+<style>
+  .progress-row {
+    display: flex;
+    gap: 1.5ch;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .goal {
+    min-width: 20ch;
+    flex-shrink: 0;
+  }
+
+  .bar {
+    color: var(--purple);
+  }
+
+  .percent {
+    min-width: 7ch;
+    text-align: right;
+  }
+</style>

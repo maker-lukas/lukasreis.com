@@ -2,7 +2,7 @@
 title: "What is Hack Club?"
 description: "Talking About What Hack Club Is To Me"
 date: 2026-01-05
-tags: ["Hack CLub", "Personal"]
+tags: ["Hack Club", "Personal"]
 ---
 
 **Hack Club** is a global network of teen hackers and makers who build, code, and collaborate.

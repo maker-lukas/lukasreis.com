@@ -4,12 +4,16 @@ const commitHash = execSync('git rev-parse --short HEAD').toString().trim();
 ---
 
 <footer>
-    <a href={`https://github.com/maker-lukas/lukasreis.com-v2.1/commit/${commitHash}`}>
-        <img src="/git-commit.svg" alt="commit" />
-        {commitHash}
-    </a>
+    <div>
+        <a href={`https://github.com/maker-lukas/lukasreis.com-v2.1/commit/${commitHash}`}>
+            <img src="/git-commit.svg" alt="commit" />
+            {commitHash}
+        </a>
+    </div>
     <p>Made by Lukas with &lt;3</p>
-    <a href="https://github.com/maker-lukas">GitHub</a>
+    <div>
+        <a href="https://github.com/maker-lukas">GitHub</a>
+    </div>
 </footer>
 
 <style>
