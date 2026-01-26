@@ -1,0 +1,32 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { buttons } from "../data/buttons";
+---
+
+<Layout title="lukas/buttons">
+    <div class="buttons">
+        {buttons.map((btn) => (
+            <a href={btn.href}>
+                <img src={`/images/88x31/${btn.image}`} alt={btn.image.split('.')[0]} width="88" height="31" />
+            </a>
+        ))}
+    </div>
+</Layout>
+
+<style>
+    .buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        padding-block: 50px;
+    }
+    .buttons img {
+        display: block;
+        image-rendering: pixelated;
+        transition: transform 0.2s ease, filter 0.2s ease;
+    }
+    .buttons a:hover img {
+        transform: scale(1.5);
+    }
+</style>

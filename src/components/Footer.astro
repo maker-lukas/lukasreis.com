@@ -4,16 +4,19 @@ const commitHash = execSync('git rev-parse --short HEAD').toString().trim();
 ---
 
 <footer>
-    <div>
-        <a href={`https://github.com/maker-lukas/lukasreis.com-v2.1/commit/${commitHash}`}>
-            <img src="/git-commit.svg" alt="commit" />
-            {commitHash}
-        </a>
+    <div class="footer-content">
+        <div>
+            <a href={`https://github.com/maker-lukas/lukasreis.com-v2.1/commit/${commitHash}`}>
+                <img src="/git-commit.svg" alt="commit" />
+                {commitHash}
+            </a>
+        </div>
+        <p>Made by Lukas with &lt;3</p>
+        <div>
+            <a href="/buttons">buttons</a>
+        </div>
     </div>
-    <p>Made by Lukas with &lt;3</p>
-    <div>
-        <a href="https://github.com/maker-lukas">GitHub</a>
-    </div>
+
 </footer>
 
 <style>
@@ -21,33 +24,40 @@ const commitHash = execSync('git rev-parse --short HEAD').toString().trim();
         font-size: 15px;
         margin-top: 10px;
         margin-bottom: 35px;
+    }
+
+    .footer-content {
         display: flex;
         justify-content: space-between;
         align-items: center;
         position: relative;
     }
 
-    footer a:first-child {
+    .footer-content > div:first-child a {
         display: inline-flex;
         align-items: center;
         gap: 0.25rem;
+    }
+
+    .footer-content > div:first-child {
         flex: 1;
     }
 
-    footer p {
+    .footer-content p {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
     }
 
-    footer a:last-child {
+    .footer-content > div:last-child {
         flex: 1;
         text-align: right;
     }
 
-    footer a:first-child img {
+    .footer-content img {
         height: 1em;
         vertical-align: middle;
     }
+
 </style>
 

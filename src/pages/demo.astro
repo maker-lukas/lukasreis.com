@@ -1,0 +1,224 @@
+---
+import Intro from "../components/Intro.astro";
+import Layout from "../layouts/Layout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import BlogCard from "../components/BlogCard.astro";
+import { projects } from "../data/projects";
+import { getCollection } from "astro:content";
+import Stats from "../components/Stats.astro";
+
+const featuredProjects = projects.slice(0, 2);
+const recentPosts = (await getCollection("blog"))
+	.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+	.slice(0, 2);
+---
+
+<Layout title="lukas/demo">
+
+	<button class="toggle-btn" id="toggleBtn">
+		Layout: <span id="layoutName">None</span>
+	</button>
+
+	<div class="page">
+
+		<div>
+			<Intro/>
+			<Stats/>
+		</div>
+
+		<div class="container">
+			<div class="titles">
+				<p class="text">Projects</p>
+				<a class="link" href="/projects">View all →</a>
+			</div>
+
+			<div class="projects">
+				{featuredProjects.map((p) => (
+					<ProjectCard {...p} />
+				))}
+			</div>
+
+		</div>
+
+		<div class="container">
+			<div class="titles">
+				<p class="text">Blog</p>
+				<a class="link" href="/blog">View all →</a>
+			</div>
+
+			<div class="blog-posts">
+				{recentPosts.map((post) => (
+					<BlogCard
+						title={post.data.title}
+						description={post.data.description}
+						date={post.data.date}
+						slug={post.slug}
+						tags={post.data.tags}
+					/>
+				))}
+			</div>
+
+		</div>
+
+		<div class="link-position" data-position="below-blog">
+			<a class="buttons-link" href="/buttons">88x31 buttons →</a>
+		</div>
+
+	</div>
+
+
+
+</Layout>
+
+<script>
+	const layouts = ['none', 'below-blog', 'replace-made-by', 'replace-github'];
+	let currentIndex = 0;
+
+	const toggleBtn = document.getElementById('toggleBtn');
+	const layoutName = document.getElementById('layoutName');
+	const positions = document.querySelectorAll('.link-position');
+	const footer = document.querySelector('footer');
+	const madeByText = footer?.querySelector('p');
+	const githubLink = footer?.querySelector('.footer-content > div:last-child');
+	
+	const madeByOriginal = madeByText?.innerHTML;
+	const githubOriginal = githubLink?.innerHTML;
+
+	function updateLayout() {
+		const current = layouts[currentIndex];
+		layoutName!.textContent = current.charAt(0).toUpperCase() + current.slice(1).replace(/-/g, ' ');
+		
+		positions.forEach(pos => {
+			const position = (pos as HTMLElement).dataset.position;
+			if (current === position) {
+				pos.classList.add('visible');
+			} else {
+				pos.classList.remove('visible');
+			}
+		});
+
+		// Reset footer
+		if (madeByText && madeByOriginal) madeByText.innerHTML = madeByOriginal;
+		if (githubLink && githubOriginal) githubLink.innerHTML = githubOriginal;
+
+		// Replace options
+		if (current === 'replace-made-by' && madeByText) {
+			madeByText.innerHTML = '<a href="/buttons">88x31</a>';
+		}
+		if (current === 'replace-github' && githubLink) {
+			githubLink.innerHTML = '<a href="/buttons">88x31</a>';
+		}
+	}
+
+	toggleBtn?.addEventListener('click', () => {
+		currentIndex = (currentIndex + 1) % layouts.length;
+		updateLayout();
+	});
+
+	updateLayout();
+</script>
+
+<style>
+	.toggle-btn {
+		position: fixed;
+		top: 1rem;
+		right: 1rem;
+		z-index: 100;
+		background: var(--dark-purple);
+		border: 2px solid var(--purple);
+		color: var(--text);
+		padding: 0.5rem 1rem;
+		border-radius: 6px;
+		cursor: pointer;
+		font-family: inherit;
+		font-size: 14px;
+		transition: border-color 0.2s ease;
+	}
+
+	.toggle-btn:hover {
+		border-color: var(--light-purple);
+	}
+
+	.link-position {
+		display: none;
+	}
+
+	.link-position.visible {
+		display: block;
+	}
+
+	.buttons-link {
+		font-size: 16px;
+		font-weight: bold;
+	}
+
+	.page {
+		display: flex;
+		flex-direction: column;
+		gap: 50px;
+		padding-block: 50px;
+	}
+
+	.titles {
+		display: flex;
+        align-items: center;
+        justify-content: space-between;
+		margin-bottom: 1ch;
+	}
+
+	.projects {
+		display: flex;
+		gap: 16px;
+	}
+
+	.project {
+		flex: 1;
+		background: var(--dark-purple);
+		border-radius: 10px;
+		min-height: 350px;
+		padding: 1ch;
+		border: 3px solid var(--purple);
+		cursor: pointer;
+		transition: border-color 0.2s ease;
+	}
+
+	.project:hover {
+		border-color: var(--light-purple);
+	}
+
+	.text {
+		font-size: 20px;
+		font-weight: bold;
+	}
+
+	.link {
+		font-size: 16px;
+		font-weight: bold;
+	}
+
+	.blog-posts {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	.blog-post {
+		background: var(--dark-purple);
+		border-radius: 10px;
+		padding: 1ch;
+		border: 3px solid var(--purple);
+		min-height: 115px;
+		cursor: pointer;
+		transition: border-color 0.2s ease;
+	}
+
+	.blog-post:hover {
+		border-color: #9b7bc4;
+	}
+
+    @media (max-width: 500px) {
+        .projects {
+            flex-direction: column;
+        }
+    }
+</style>
