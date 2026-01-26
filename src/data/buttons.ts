@@ -1,4 +1,5 @@
 export const buttons = [
+  { image: "lukas.gif", href: "/"},
   { image: "astro.png", href: "https://astro.build/" },
   { image: "vscode.png", href: "https://code.visualstudio.com/" },
   { image: "hackclub.png", href: "https://hackclub.com" },

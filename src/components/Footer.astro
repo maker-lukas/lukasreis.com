@@ -13,7 +13,7 @@ const commitHash = execSync('git rev-parse --short HEAD').toString().trim();
         </div>
         <p>Made by Lukas with &lt;3</p>
         <div>
-            <a href="/buttons">buttons</a>
+            <a class="buttons" href="/buttons">buttons</a>
         </div>
     </div>
 
@@ -59,5 +59,12 @@ const commitHash = execSync('git rev-parse --short HEAD').toString().trim();
         vertical-align: middle;
     }
 
+    .buttons {
+        text-decoration: underline !important;
+    }
+
+    .buttons:hover {
+        text-decoration: none !important;
+    }
 </style>
 

@@ -21,6 +21,6 @@ export const projects = [
     title: "FireFly Tiny Whoop",
     description: "A custom 75mm tiny whoop drone frame",
     image: "/images/firefly.png",
-    github: "https://github.com/maker-lukas/"
+    github: "https://github.com/maker-lukas/firefly-drone"
   }
 ];
