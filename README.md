@@ -1,7 +1,11 @@
 # lukasreis.com
 
-My personal website!
+My personal website built with Astro, featuring blog and project pages.
 
-With a blog page and projects!
+![website overview](/public/images/website.png)
 
-**meow mrrp :3**
+## Run locally
+``` bash
+npm install
+npm run dev
+```
