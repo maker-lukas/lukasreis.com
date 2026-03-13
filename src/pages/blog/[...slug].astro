@@ -20,7 +20,7 @@ const formattedDate = post.data.date.toLocaleDateString('en-US', {
 });
 ---
 
-<Layout title={`lukas/blog/${post.slug}`}>
+<Layout title={`lukas/blog/${post.slug}`} description={post.data.description}>
     <div class="page">
       <div class="heading">
         <h2>{post.data.title}</h2>

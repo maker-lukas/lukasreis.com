@@ -11,6 +11,7 @@
   "dependencies": {
     "@astrojs/cloudflare": "^12.6.12",
     "@astrojs/mdx": "^4.3.13",
+    "@astrojs/rss": "^4.0.17",
     "astro": "^5.16.11",
     "typewriter-effect": "^2.22.0"
   },
