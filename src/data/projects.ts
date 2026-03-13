@@ -20,7 +20,7 @@ export const projects = [
   {
     title: "Dial",
     description: "A smooth scrolling 70mm dial with as AS5600 sensor.",
-    image: "/images/dial.png",
+    image: "/images/dial.avif",
     github: "https://github.com/maker-lukas/scroll-dial",
   },
   {
