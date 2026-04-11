@@ -28,5 +28,11 @@ export const projects = [
     description: "A custom 75mm tiny whoop drone frame",
     image: "/images/firefly.png",
     github: "https://github.com/maker-lukas/firefly-drone"
+  },
+  {
+    title: "Spotify Overlay",
+    description: "A minimal, always-on-top Spotify overlay for Linux.",
+    image: "/images/spotify-overlay.png",
+    github: "https://github.com/maker-lukas/spotify-overlay"
   }
 ];
