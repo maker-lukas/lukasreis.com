@@ -20,12 +20,12 @@ We organized a build day, and with the help of Mirco and my brother Manni, we cu
 
 Once the ramps were finished, they were used regularly.
 
-![Someone on the ramp](/public/images/person_on_ramp_1.jpg)
+![Someone on the ramp](/images/person_on_ramp_1.jpg)
 
-![Someone on the ramp](/public/images/person_on_ramp_2.jpg)
+![Someone on the ramp](/images/person_on_ramp_2.jpg)
 
 I also helped start a weekly skate session called "Skat'ana", where Sergio a more experienced skater, started teaching anyone who wanted to learn every Wednesday. The ramps made it possible for anyone to come and skate at the rink.
 
-![Sergio teaching](/public/images/person_on_ramp_with_teacher.jpg)
+![Sergio teaching](/images/person_on_ramp_with_teacher.jpg)
 
 I was around 11-12 when I did this, but I still felt like it was really my project. Of course I couldn't have done it without the help of my dad, Mirco, and the rest of the RUA+ group, but I felt very involved and in control of the whole process. It definitely took longer than I expected, partly because we relied on Mirco who had other jobs going on. But it was a really good experience overall, and it changed how I approach new projects. Having gone through the whole thing from idea to something people actually use gave me a much better sense of what it takes to make something real.
