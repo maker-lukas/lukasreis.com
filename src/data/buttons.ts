@@ -3,6 +3,7 @@ export const buttons = [
   { image: "astro.png", href: "https://astro.build/" },
   { image: "vscode.png", href: "https://code.visualstudio.com/" },
   { image: "hackclub.png", href: "https://hackclub.com" },
+  { image: "frog.gif", href: "https://thefrog.me" },
   { image: "3kh0.png", href: "https://3kh0.net" },
   { image: "skyfall.png", href: "https://mahadk.com/" },
   { image: "fropii.gif", href: "https://froppii.dev/" },
