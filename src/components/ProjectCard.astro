@@ -3,14 +3,15 @@ interface Props {
   title: string;
   description: string;
   image: string;
-  github: string;
+  link: string;
+  pixelated?: boolean;
 }
-const { title, description, image, github } = Astro.props;
+const { title, description, image, link, pixelated = false } = Astro.props;
 ---
 
-<a href={github} target="_blank" class="project">
+<a href={link} target="_blank" class="project">
   <div class="image">
-    <img src={image} alt={title} />
+    <img src={image} alt={title} class:list={[{ pixelated }]} />
   </div>
   <div>
     <h4>{title}</h4>
@@ -53,6 +54,11 @@ const { title, description, image, github } = Astro.props;
     object-fit: cover;
     border-radius: 5px;
     display: block;
+  }
+
+  img.pixelated {
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
   }
 
   h4 {
