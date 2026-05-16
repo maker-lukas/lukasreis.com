@@ -5,3 +5,4 @@ date: 2026-04-26
 tags: ["Web", "Hardware", "Printer"]
 ---
 
+draft
