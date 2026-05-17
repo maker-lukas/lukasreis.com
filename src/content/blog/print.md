@@ -36,7 +36,7 @@ Until now there have been no abuses in the messages, but if there are i don't ha
 
 I used Amp quite a lot to help me make the website, which is not something i'm particularly proud of, but usually when i vibe code i still learn from it because for the majority of the code it gives me i always ask for an explanation, and many times i also write the actual code myself. But it was not me who made all of the code.
 
-Up to now i already have 5 sheets of paper printed with 120+ messages! And yes, this will be running as long as i can have it running, so you can go to the website right now and send a message!
+Up to now i already have 5 sheets of paper printed with 120+ messages! And yes, this will be running as long as i can have it running, so you can go to the website right now and send a message! The source code is all on [GitHub](https://github.com/maker-lukas/print.lukasreis.com) if you want to take a look.
 
 ![The stack of printed papers](/images/papers.webp)
 
