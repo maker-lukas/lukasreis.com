@@ -16,13 +16,13 @@ export const projects = [
   {
     title: "Lyric Pet",
     description: "A desktop device that displays the lyrics of your currently playing music in real time!",
-    image: "images/lyric_pet.JPG",
+    image: "/images/lyric_pet.JPG",
     link: "https://github.com/maker-lukas/lyric-pet"
   },
     {
     title: "Pac Pad",
     description: "A small arcade pad to play your favorite retro games!",
-    image: "images/pacpad.JPG",
+    image: "/images/pacpad.JPG",
     link: "https://github.com/maker-lukas/pac-pad"
   },
   {
