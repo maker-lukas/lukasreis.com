@@ -1,3 +1,5 @@
+import { title } from "node:process";
+
 export const projects = [
   {
     title: "40%ish Split Keyboard",
@@ -10,6 +12,18 @@ export const projects = [
     description: "A website where you can leave a small message and it will auto-print on my home printer!",
     image: "/images/print.png",
     link: "https://print.lukasreis.com"
+  },
+  {
+    title: "Lyric Pet",
+    description: "A desktop device that displays the lyrics of your currently playing music in real time!",
+    image: "images/lyric_pet.JPG",
+    link: "https://github.com/maker-lukas/lyric-pet"
+  },
+    {
+    title: "Pac Pad",
+    description: "A small arcade pad to play your favorite retro games!",
+    image: "images/pacpad.JPG",
+    link: "https://github.com/maker-lukas/pac-pad"
   },
   {
     title: "B.E.T.T",
