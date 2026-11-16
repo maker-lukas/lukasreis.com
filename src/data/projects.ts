@@ -14,6 +14,12 @@ export const projects = [
     link: "https://print.lukasreis.com"
   },
   {
+    title: "hindr",
+    description: "A game about a horse dating app",
+    image: "/images/hindr.png",
+    link: "hindr.vercel.gay"
+  },
+  {
     title: "Lyric Pet",
     description: "A desktop device that displays the lyrics of your currently playing music in real time!",
     image: "/images/lyric_pet.JPG",
