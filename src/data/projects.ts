@@ -17,7 +17,7 @@ export const projects = [
     title: "hindr",
     description: "A game about a horse dating app",
     image: "/images/hindr.png",
-    link: "hindr.vercel.gay"
+    link: "https://hindr.vercel.gay"
   },
   {
     title: "Lyric Pet",
